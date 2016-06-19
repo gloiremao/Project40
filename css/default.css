@@ -34,3 +34,7 @@ nav li{
 #results-area{
 	display: none;
 }
+
+#tab-nav {
+	margin-bottom: 10px;
+}
