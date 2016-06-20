@@ -38,3 +38,15 @@ nav li{
 #tab-nav {
 	margin-bottom: 10px;
 }
+
+.area-hide {
+	display: none;
+}
+
+.area-show {
+	display: block;
+}
+
+.author {
+	color: green;
+}
