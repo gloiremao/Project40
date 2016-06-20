@@ -14,6 +14,13 @@ $(document).ready(function(){
 	//handle search 
 	$("#search_btn").click(function(){
 		$("#results-area").show();
+		$("#trend-area").animate({height:'0px'},500,function(){
+			$("#trend-area").hide();
+		});
+		$('html, body').stop().animate({
+            scrollTop: $('#search-area').offset().top
+        }, 1500, 'easeInOutExpo');
+        event.preventDefault();
 	});
 
 	
