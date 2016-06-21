@@ -23,7 +23,11 @@ $(document).ready(function(){
         event.preventDefault();
 	});
 
-	$("")
+	//handle abstract toggle
+	$("button.a_btn").click(function(){
+		var target = $(this).attr("data-target");
+		$("p[data-target="+ target +"]").toggle();
+	});
 
 	
 
