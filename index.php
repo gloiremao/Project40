@@ -103,18 +103,23 @@
 			<div class="tab-content">
 				<div id="hot-paper" class="tab-pane fade in active">
 					<div class="list-group">
-					
+						<?php 
+							foreach ($papers as $key => $paper) {
+								echo "<a data-target='{$paper->id}' href='{$paper->link}' class='list-group-item'>
+									    <h4 class='list-group-item-heading'>{$paper->title}</h4>
+									    <p class='list-group-item-text'>{$paper->authors}</p>
+									  </a>";
+							}
+							
+						?>
 
-					  <a href="#" class="list-group-item">
-					    <h4 class="list-group-item-heading">A scalable distributed parallel breadth-first search algorithm on BlueGene/L.</h4>
-					    <p class="list-group-item-text">Proceedings of the ACM/IEEE SC 2005 Conference.</p>
-					    <p class="list-group-item-text">Yoo, Andy and Chow, Edmond and Henderson, Keith and McLendon, William and Hendrickson, Bruce and Catalyurek, Umit</p>
+					  <!-- 
+					  <a href='' class='list-group-item'>
+					    <h4 class='list-group-item-heading'>A scalable distributed parallel breadth-first search algorithm on BlueGene/L.</h4>
+					    <p class='list-group-item-text'>Proceedings of the ACM/IEEE SC 2005 Conference.</p>
+					    <p class='list-group-item-text'>Yoo, Andy and Chow, Edmond and Henderson, Keith and McLendon, William and Hendrickson, Bruce and Catalyurek, Umit</p>
 					  </a>
-					  <a href="#" class="list-group-item">
-					    <h4 class="list-group-item-heading">A scalable distributed parallel breadth-first search algorithm on BlueGene/L.</h4>
-					    <p class="list-group-item-text">Proceedings of the ACM/IEEE SC 2005 Conference.</p>
-					    <p class="list-group-item-text">Yoo, Andy and Chow, Edmond and Henderson, Keith and McLendon, William and Hendrickson, Bruce and Catalyurek, Umit</p>
-					  </a>
+					  -->
 					</div>
 				</div>
 				<div id="new-paper" class="tab-pane fade">
@@ -148,7 +153,7 @@
 		</div>
 			
 		<div id="serach_results" class="list-group">
-			<div data-target="1" class="papers col-md-10">
+			<div data-target="1" class="papers">
 				<a href="#" >
 			    	<h4 data-type="title" class="list-group-item-heading"><i class="fa fa-file-text-o" aria-hidden="true"></i> A scalable distributed parallel breadth-first search algorithm on BlueGene/L.</h4>
 			  	</a>
@@ -157,10 +162,7 @@
 			    <button type="button" data-target="1" class="btn btn-link btn-xs a_btn">Abstract</button>
 			    <p data-target="1" class="list-group-item-text area-hide">some detail</p>
 		  	</div>
-		  	<div data-target="1" class="papers col-md-2">
-		  		<a href=""><h4 data-target="1" class="archive"><i class="fa fa-archive" aria-hidden="true"></i></h4></a>
-		  	</div>
-		  	<div data-target="2" class="papers col-md-8">
+		  	<div data-target="2" class="papers">
 				<a href="#" >
 			    	<h4 data-type="title" class="list-group-item-heading"><i class="fa fa-file-text-o" aria-hidden="true"></i> A scalable distributed parallel breadth-first search algorithm on BlueGene/L.</h4>
 			  	</a>

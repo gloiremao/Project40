@@ -54,3 +54,8 @@ nav li{
 .papers {
 	margin-bottom: 10px;
 }
+
+.archive {
+	font-size: xx-large;
+	text-align: right;
+}

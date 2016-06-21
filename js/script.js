@@ -6,7 +6,7 @@ $(document).ready(function(){
 	$('#input-search').bind('focus', function(event) {
         $('html, body').stop().animate({
             scrollTop: $('#search-area').offset().top
-        }, 1500, 'easeInOutExpo');
+        }, 500, 'easeInOutExpo');
         event.preventDefault();
     });
 
@@ -19,7 +19,7 @@ $(document).ready(function(){
 		});
 		$('html, body').stop().animate({
             scrollTop: $('#search-area').offset().top
-        }, 1500, 'easeInOutExpo');
+        }, 500, 'easeInOutExpo');
         event.preventDefault();
 	});
 
@@ -42,7 +42,7 @@ function search(keywords){
    	);
 }
 
-function appendResultHTML(paper_id,paper_url,paper_title,paper_authors,paper_info,paper_abstract){
+function appendResultHTML(paper_id,paper_url,paper_title,paper_authors,paper_info,paper_abstract,paper_type){
 	/*var paper_id;
 	var paper_url;
 	var paper_title;
@@ -51,6 +51,12 @@ function appendResultHTML(paper_id,paper_url,paper_title,paper_authors,paper_inf
 	var paper_abstract;*/
 	if(paper_type == "paper"){
 		type_icon = "<i class='fa fa-file-text-o' aria-hidden='true'></i>"
+	} else if (paper_type = "ppt"){
+		type_icon = "<i class='fa fa-file-powerpoint-o' aria-hidden='true'></i>";
+	} else if ( paper_type = "pdf"){
+		type_icon = '<i class="fa fa-file-pdf-o" aria-hidden="true"></i>';
+	} else if ( paper_type = 'code'){
+		type_icon = '<i class="fa fa-file-code-o" aria-hidden="true"></i>';
 	}
 
 	var results_html = "<div data-target='"+type_icon+" "+paper_id
