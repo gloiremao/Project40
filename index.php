@@ -104,7 +104,7 @@
 				<div id="hot-paper" class="tab-pane fade in active">
 					<div class="list-group">
 						<?php 
-							foreach ($papers as $key => $paper) {
+							foreach ($papers as $paper) {
 								echo "<a data-target='{$paper->id}' href='{$paper->link}' class='list-group-item'>
 									    <h4 class='list-group-item-heading'>{$paper->title}</h4>
 									    <p class='list-group-item-text'>{$paper->authors}</p>
