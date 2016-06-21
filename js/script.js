@@ -37,6 +37,27 @@ $(document).ready(function(){
 
 });
 
+var isMenuOpen = false;
+
+function openNav() {
+	if(isMenuOpen){
+		closeNav();
+	}else{
+		document.getElementById("mySidenav").style.width = "250px";
+    	$("#main").animate({marginLeft:'250px'},500);
+    	isMenuOpen = true;
+	}
+    
+}
+
+function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+    $("#main").animate({marginLeft:'0px'},500);
+    document.body.style.backgroundColor = "white";
+    isMenuOpen = 0;
+    window.scrollTo(0, 0);
+}
+
 function search(keywords){
 	//search query
 	$.get("search", { query: keywords },

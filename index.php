@@ -50,7 +50,7 @@
 		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 		  
 		  <ul class="nav navbar-nav">
-		    
+		    <li><a id="slidenav_btn" onclick="openNav()">個人中心</a></li>
 		  </ul>
 		  
 		  <ul class="nav navbar-nav navbar-right">
@@ -78,6 +78,14 @@
 	<header>
 		
 	</header>
+
+	<!-- slide menu-->
+	<div id="mySidenav" class="sidenav">
+		<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+		<a href="">上傳文件</a>
+		<a href="">帳戶管理</a>
+		<a href="">我的文章</a>
+	</div>
 	
 	<div id="search-area" class="container">
 		<div class="row">
