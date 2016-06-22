@@ -37,11 +37,11 @@
 
 	    <div class="navbar-header">
 	    	<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-        		<span class="sr-only">Toggle navigation</span>
-        		<span class="icon-bar"></span>
-        		<span class="icon-bar"></span>
-        		<span class="icon-bar"></span>
-      		</button>
+	    		<span class="sr-only">Toggle navigation</span>
+	    		<span class="icon-bar"></span>
+	    		<span class="icon-bar"></span>
+	    		<span class="icon-bar"></span>
+	  		</button>
 	      <a class="navbar-brand" href="#">
 	        <img id="icon" alt="Brand" src="img/icon.png">
 	      </a>
@@ -81,78 +81,11 @@
 
 	  </div>
 	</nav>
-
-	<header>
-		
-		<div class="container">
-			<div class="row">
-				<div id="top-intro" class="col-md-8 col-md-offset-2">
-					<img id="top-logo" src="img/logo.png">
-		            <h1 class="brand-heading">生產力 4.0 知識庫</h1>
-		        </div>
-				<div id="search-area" class="col-md-8 col-md-offset-2">
-		    		<div class="input-group input-group-lg">
-		      			<input id="input-search" type="text" class="form-control" placeholder="搜尋...">
-		      			<span class="input-group-btn">
-		        			<button id="search_btn" class="btn btn-default" type="button"><i class="fa fa-search" aria-hidden="true"></i></button>
-		      			</span>
-		    		</div><!-- /input-group -->
-		  		</div><!-- /.col-lg-6 -->
-			</div>
-		</div>	
-	</header>
-	
 	
 
-	<div id="content-area">
-		
-		<div id="info-area" class="container">
+	 @section('index')
 
-			<div id="hot-paper" class="cardview">
-				<div class="page-header">
-				  	<h4 class="section-title"><i class="fa fa-sort-amount-desc" aria-hidden="true"></i> 熱門文章</h4>
-				</div>
-				<div class="list-group">
-				  <a href="#" class="list-group-item">
-				    <h4 class="list-group-item-heading">A scalable distributed parallel breadth-first search algorithm on BlueGene/L.</h4>
-				    <p class="list-group-item-text">Proceedings of the ACM/IEEE SC 2005 Conference.</p>
-				    <p class="list-group-item-text">Yoo, Andy and Chow, Edmond and Henderson, Keith and McLendon, William and Hendrickson, Bruce and Catalyurek, Umit</p>
-				  </a>
-				  <a href="#" class="list-group-item">
-				    <h4 class="list-group-item-heading">A scalable distributed parallel breadth-first search algorithm on BlueGene/L.</h4>
-				    <p class="list-group-item-text">Proceedings of the ACM/IEEE SC 2005 Conference.</p>
-				    <p class="list-group-item-text">Yoo, Andy and Chow, Edmond and Henderson, Keith and McLendon, William and Hendrickson, Bruce and Catalyurek, Umit</p>
-				  </a>
-				</div>
-			</div>
-
-			
-			<div id="new-paper" class="cardview">
-				<div class="page-header">
-				  	<h4 class="section-title"><i class="fa fa-bolt" aria-hidden="true"></i> 最新上傳</h4>
-				</div>
-				<div class="list-group">
-				  <a href="#" class="list-group-item">
-				    <h4 class="list-group-item-heading">New</h4>
-				    <p class="list-group-item-text">Proceedings of the ACM/IEEE SC 2005 Conference.</p>
-				    <p class="list-group-item-text">Yoo, Andy and Chow, Edmond and Henderson, Keith and McLendon, William and Hendrickson, Bruce and Catalyurek, Umit</p>
-				  </a>
-				</div>
-			</div>
-			
-			
-		</div>
-
-		<div id="results-area" class="container cardview">
-			<div class="page-header">
-			  <h4 id="show_serach_keywords" class="section-title"><i class="fa fa-search" aria-hidden="true"></i> 搜尋結果: </h4>
-			</div>
-				
-			<div id="serach_results" class="list-group"></div>
-
-		</div>
-
-	</div>
+	 @show
 
 	<!-- The content of your page would go here. -->
 	<div class="org-line"></div>
