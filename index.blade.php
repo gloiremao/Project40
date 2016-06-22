@@ -1,10 +1,18 @@
 @extends('master')
 
+@section('include-index_css')
+	<link rel="stylesheet" type="text/css" href="css/default.css">
+@stop
+
+@section('include-index_js')
+	<script type="text/javascript" src="js/script.js"></script>
+@stop
+
 
 @section('index')
 	@parent
 <header>
-	<div class="container">
+	<div id="header-blur" class="container">
 		<div class="row">
 			<div id="top-intro" class="col-md-8 col-md-offset-2">
 				<img id="top-logo" src="img/logo.png">

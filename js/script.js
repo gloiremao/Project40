@@ -13,7 +13,7 @@ $(document).ready(function(){
 
 	//handle search 
 	$("#search_btn").click(function(){
-		$("#results-area").css("height","1000px");
+		$("#results-area").css("height","auto");
 		$("#results-area").show();
 		$("#info-area").animate({height:'0px'},500,function(){
 			$("#info-area").hide();
@@ -30,7 +30,7 @@ $(document).ready(function(){
 	});
 
 	$("#trend-toggle").click(function(event){
-		$("#info-area").css("height","1000px");
+		$("#info-area").css("height","auto");
 		$("#info-area").show();
 		
 		$("#results-area").animate({height:'0px'},500,function(){
