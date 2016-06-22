@@ -1,0 +1,68 @@
+#icon {
+	height: 100%;
+}
+
+body {
+	background-image: url(../img/crossword.png);
+}
+
+footer p {
+	color: white;
+	font-family: "SimHei";
+}
+
+.org-line {
+	width: 100%;
+	height: 10px;
+	background-color: #ff471a;
+	margin-top: 20px;
+}
+
+#paper {
+	background-color: white;
+}
+
+.cardview {
+	padding: 20px;
+	margin-bottom: 20px;
+	background-color: white;
+	box-shadow:4px 4px 12px -2px rgba(20%,20%,40%,0.5);
+}
+
+#moe {
+	width: 75px;
+	height: 75px;
+	margin-left: 10px;
+}
+
+nav li{
+	margin-left: 5px;
+	margin-right: 5px;
+}
+
+.paper-info p {
+	font-size: 18px;
+}
+
+.paper-table tabel {
+
+}
+
+.table-title {
+	text-align: right;
+	font-size: 16px;
+}
+
+.table-info {
+	text-align: left;
+	font-size: 16px;
+}
+
+#input-comment {
+	background-color: rgba(128, 128, 128, 0.08);
+}
+
+#btn-commit {
+	margin-top: 10px;
+	float: right;
+}

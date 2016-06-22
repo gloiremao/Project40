@@ -2,7 +2,7 @@
 <head>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<title>生產力4.0知識庫</title>
+	<title>Industry 4.0</title>
 	
 	<link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
 	
@@ -17,8 +17,16 @@
 
 	
 	<link rel="stylesheet" href="css/footer.css">
-	@yield('include-index_css')
+	<link rel="stylesheet" type="text/css" href="css/view.css">
 
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+	
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
+	<script type="text/javascript" src="js/script.js"></script>
+	<script type="text/javascript" src="js/jquery.easing.min.js"></script>
+	
 	
 </head>
 
@@ -29,11 +37,11 @@
 
 	    <div class="navbar-header">
 	    	<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-	    		<span class="sr-only">Toggle navigation</span>
-	    		<span class="icon-bar"></span>
-	    		<span class="icon-bar"></span>
-	    		<span class="icon-bar"></span>
-	  		</button>
+        		<span class="sr-only">Toggle navigation</span>
+        		<span class="icon-bar"></span>
+        		<span class="icon-bar"></span>
+        		<span class="icon-bar"></span>
+      		</button>
 	      <a class="navbar-brand" href="#">
 	        <img id="icon" alt="Brand" src="img/icon.png">
 	      </a>
@@ -73,11 +81,72 @@
 
 	  </div>
 	</nav>
-	
 
-	 @section('index')
 
-	 @show
+	<div id="content-area">
+		
+		<div id="paper" class="container cardview">
+			<div class="page-header">
+			  	<h3 class="paper-title"><a href="paper-link" ><i class="fa fa-file-text-o" aria-hidden="true"></i> Paper Title</a></h3>
+			</div>
+			<div class="paper-info">
+				<table class="paper-table">
+				  <tr>
+				    <td class="table-title">連結網址</td>
+				    <td class="table-info"></td>
+				  </tr>
+				  <tr>
+				    <td class="table-title">作者</td>
+				    <td class="table-info"></td>
+				  </tr>
+				  <tr>
+				    <td class="table-title">單位</td>
+				    <td class="table-info"></td>
+				  </tr>
+				  <tr>
+				    <td class="table-title">發佈日期</td>
+				    <td class="table-info"></td>
+				  </tr>
+				  <tr>
+				    <td class="table-title">出處 </td>
+				    <td class="table-info"></td>
+				  </tr>
+				  <tr>
+				    <td class="table-title">單位</td>
+				    <td class="table-info"></td>
+				  </tr>
+				  <tr>
+				    <td class="table-title">關鍵字</td>
+				    <td class="table-info"></td>
+				  </tr>
+				  <tr>
+				    <td class="table-title">等級</td>
+				    <td class="table-info"></td>
+				  </tr>
+				  <tr>
+				    <td class="table-title">LC&amp;VS</td>
+				    <td class="table-info"></td>
+				  </tr>
+				  <tr>
+				    <td class="table-title"> Vertical Layers</td>
+				    <td class="table-info"></td>
+				  </tr>
+				  <tr>
+				    <td class="table-title">Horizontal Layers</td>
+				    <td class="table-info"></td>
+				  </tr>
+				</table>
+			</div>
+
+			<div class="page-header">
+			  	<h4><i class="fa fa-comments-o" aria-hidden="true"></i> 評論與問題回報</h4>
+			</div>
+			<textarea id="input-comment"class="form-control" rows="3" placeholder="發表評論或問題回報"></textarea>
+			<button id="btn-commit" class="btn btn-default" type="submit">送出</button>
+
+		</div>
+
+	</div>
 
 	<!-- The content of your page would go here. -->
 	<div class="org-line"></div>
@@ -85,10 +154,8 @@
 
 		<div class="container">
 			<div class="footer-left">
-
 				<p>指導單位: </p>
 				<img id="moe" src="img/moe_logo.png">
-
 				
 			</div>
 
@@ -110,14 +177,14 @@
 
 
 	</footer>
-	
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
 	
 	<!-- Latest compiled and minified JavaScript -->
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
-	<script type="text/javascript" src="js/jquery.easing.min.js"></script>
 
-	@yield('include-index_js')
+	<script type="text/javascript" src="js/view.js"></script>
+	<script type="text/javascript" src="js/jquery.easing.min.js"></script>
+	
 
 </body>
