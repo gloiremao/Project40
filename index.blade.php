@@ -1,15 +1,15 @@
 @extends('master')
 
-@section('include-index_css')
+@section('include-css')
 	<link rel="stylesheet" type="text/css" href="css/default.css">
 @stop
 
-@section('include-index_js')
+@section('include-js')
 	<script type="text/javascript" src="js/script.js"></script>
 @stop
 
 
-@section('index')
+@section('content')
 	@parent
 <header>
 	<div id="header-blur" class="container">
@@ -20,7 +20,7 @@
 	        </div>
 			<div id="search-area" class="col-md-8 col-md-offset-2">
 	    		<div class="input-group input-group-lg">
-	      			<input id="input-search" type="text" class="form-control" placeholder="搜尋...">
+	      			<input id="input-search" type="text" class="form-control" placeholder="搜尋..." onkeypress="return onEnterPress(event)">
 	      			<span class="input-group-btn">
 	        			<button id="search_btn" class="btn btn-default" type="button"><i class="fa fa-search" aria-hidden="true"></i></button>
 	      			</span>
@@ -43,7 +43,7 @@
 			<div class="list-group">
 			  <?php 
 						foreach ($papers as $paper) {
-							echo "<a data-target='{$paper->id}' href='{$paper->link}' class='list-group-item'>
+							echo "<a data-target='{$paper->id}' href='view?id={$paper->id}' class='list-group-item'>
 								    <h4 class='list-group-item-heading'>{$paper->title}</h4>
 								    <p class='list-group-item-text'>{$paper->authors}</p>
 								  </a>";
@@ -59,11 +59,15 @@
 			  	<h4 class="section-title"><i class="fa fa-bolt" aria-hidden="true"></i> 最新上傳</h4>
 			</div>
 			<div class="list-group">
-			  <a href="#" class="list-group-item">
-			    <h4 class="list-group-item-heading">New</h4>
-			    <p class="list-group-item-text">Proceedings of the ACM/IEEE SC 2005 Conference.</p>
-			    <p class="list-group-item-text">Yoo, Andy and Chow, Edmond and Henderson, Keith and McLendon, William and Hendrickson, Bruce and Catalyurek, Umit</p>
-			  </a>
+			  <?php 
+						foreach ($papers as $paper) {
+							echo "<a data-target='{$paper->id}' href='view?id={$paper->id}' class='list-group-item'>
+								    <h4 class='list-group-item-heading'>{$paper->title}</h4>
+								    <p class='list-group-item-text'>{$paper->authors}</p>
+								  </a>";
+						}
+						
+					?>
 			</div>
 		</div>
 		

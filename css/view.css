@@ -2,6 +2,10 @@
 	height: 100%;
 }
 
+.link_btn {
+	cursor:pointer
+}
+
 body {
 	background-image: url(../img/crossword.png);
 }
@@ -49,13 +53,21 @@ nav li{
 }
 
 .table-title {
+	vertical-align: top;
 	text-align: right;
 	font-size: 16px;
+	padding-right: 5px;
+	color: gray;
+	width: 150px;
 }
 
 .table-info {
+	vertical-align: top;
 	text-align: left;
 	font-size: 16px;
+	word-break: break-all;
+	padding-left: 10px;
+	color: black;
 }
 
 #input-comment {
@@ -65,4 +77,37 @@ nav li{
 #btn-commit {
 	margin-top: 10px;
 	float: right;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+  
+}
+
+@media screen and (max-width: 450px) {
+	.brand-heading {font-size: 30px;}
+	header {height: 350px;}
+	#top-logo {
+		width: 175px;
+		height: 175px;
+	}
+	.table-title {
+		font-size: 14px;
+		width: 120px;
+	}
+}
+
+@media screen and (max-width: 330px) {
+	.brand-heading {font-size: 25px;}
+	.navbar-brand {font-size: 20px;}
+	header {height: 290px;}
+	#top-logo {
+		width: 125px;
+		height: 125px;
+	}
+	.table-title {
+		font-size: 12px;
+		width: 100px;
+	}
 }

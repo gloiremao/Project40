@@ -79,7 +79,7 @@ function search(keywords){
          	console.log(response);
          	var papers = JSON.parse(''+response);
          	papers.forEach(function(paper){
-         		appendResultHTML(paper.id,paper.link,paper.title,paper.authors,paper.country,paper.abstract);
+         		appendResultHTML(paper.id,paper.id,paper.title,paper.authors,paper.country,paper.abstract);
          	});
 
          	//handle abstract toggle
@@ -100,6 +100,7 @@ function appendResultHTML(paper_id,paper_url,paper_title,paper_authors,paper_inf
 	var paper_info;
 	var paper_abstract;*/
 	//default paper
+	paper_url = "view?id="+paper_id;
 	type_icon = "<i class='fa fa-file-text-o' aria-hidden='true'></i>";
 	if(paper_type == "paper"){
 		type_icon = "<i class='fa fa-file-text-o' aria-hidden='true'></i>";
@@ -121,6 +122,14 @@ function appendResultHTML(paper_id,paper_url,paper_title,paper_authors,paper_inf
 	+"' class='list-group-item-text area-hide'>"+paper_abstract+"</p>";
 
 	$("#serach_results").append(results_html);
+}
+
+function onEnterPress(event){
+	if (event.keyCode == 13) {
+        document.getElementById("search_btn").click();
+        return false;
+    }
+    return true;
 }
 
 

@@ -17,7 +17,7 @@
 
 	
 	<link rel="stylesheet" href="css/footer.css">
-	@yield('include-index_css')
+	@yield('include-css')
 
 	
 </head>
@@ -44,7 +44,7 @@
 		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 		  
 		  <ul class="nav navbar-nav">
-		  	<li><a href="">回首頁</a></li>
+		  	<li><a href="/itri">回首頁</a></li>
 		  </ul>
 		  
 		  <ul class="nav navbar-nav navbar-right">
@@ -75,7 +75,7 @@
 	</nav>
 	
 
-	 @section('index')
+	 @section('content')
 
 	 @show
 
@@ -118,6 +118,6 @@
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
 	<script type="text/javascript" src="js/jquery.easing.min.js"></script>
 
-	@yield('include-index_js')
+	@yield('include-js')
 
 </body>
