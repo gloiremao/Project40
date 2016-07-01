@@ -6,10 +6,6 @@
 	cursor:pointer
 }
 
-body {
-	background-image: url(../img/crossword.png);
-}
-
 footer p {
 	color: white;
 	font-family: "SimHei";
@@ -20,10 +16,6 @@ footer p {
 	height: 10px;
 	background-color: #ff471a;
 	margin-top: 20px;
-}
-
-#paper {
-	background-color: white;
 }
 
 .cardview {
@@ -44,43 +36,8 @@ nav li{
 	margin-right: 5px;
 }
 
-.paper-info p {
-	font-size: 18px;
-}
-
-.paper-table tabel {
-
-}
-
-.table-title {
-	vertical-align: top;
-	text-align: right;
-	font-size: 16px;
-	padding-right: 5px;
-	color: gray;
-	width: 150px;
-}
-
 .navbar-brand {
 	font-size: 20px;
-}
-
-.table-info {
-	vertical-align: top;
-	text-align: left;
-	font-size: 16px;
-	word-break: break-all;
-	padding-left: 10px;
-	color: black;
-}
-
-#input-comment {
-	background-color: rgba(128, 128, 128, 0.08);
-}
-
-#btn-commit {
-	margin-top: 10px;
-	float: right;
 }
 
 @media screen and (max-height: 450px) {
@@ -96,9 +53,8 @@ nav li{
 		width: 175px;
 		height: 175px;
 	}
-	.table-title {
-		font-size: 14px;
-		width: 120px;
+	.navbar-brand {
+		font-size: 18px;
 	}
 }
 
@@ -109,9 +65,5 @@ nav li{
 	#top-logo {
 		width: 125px;
 		height: 125px;
-	}
-	.table-title {
-		font-size: 12px;
-		width: 100px;
 	}
 }

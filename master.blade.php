@@ -29,45 +29,59 @@
 
 	    <div class="navbar-header">
 	    	<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-	    		<span class="sr-only">Toggle navigation</span>
-	    		<span class="icon-bar"></span>
-	    		<span class="icon-bar"></span>
-	    		<span class="icon-bar"></span>
-	  		</button>
+        		<span class="sr-only">Toggle navigation</span>
+        		<span class="icon-bar"></span>
+        		<span class="icon-bar"></span>
+        		<span class="icon-bar"></span>
+      		</button>
 	      <a class="navbar-brand" href="#">
 	        <img id="icon" alt="Brand" src="img/icon.png">
 	      </a>
-	      <a class="navbar-brand" href="#">生產力4.0 知識庫</a>
+	      <a class="navbar-brand" href="/itri">生產力4.0 知識庫</a>
 	    </div>
 
 		<!-- Collect the nav links, forms, and other content for toggling -->
 		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 		  
 		  <ul class="nav navbar-nav">
-		  	<li><a href="/itri">回首頁</a></li>
 		  </ul>
 		  
 		  <ul class="nav navbar-nav navbar-right">
 		  	
-		  	<li><a href=""><i class="fa fa-globe" aria-hidden="true"></i> English</a></li>
-		  	<li><a id="trend-toggle" class="link_btn">導覽知識庫</a></li>
-		  	<li><a class="link_btn" >上傳文件</a></li>
-		  	<li><a class="link_btn" >管理面板</a></li>
-		  	<li>
-		  		<button type="button" class="btn btn-default navbar-btn">登入</button>
-		  	</li>
-		  	<li>
-		  		<button type="button" class="btn btn-success navbar-btn">註冊</button>
-		  	</li>
+		  	
+		  	<li><a id="new-btn" class="link_btn" >最新文章</a></li>
+		  	<li><a id="hot-btn" class="link_btn" >熱門文章</a></li>
+		  	<li><a id="data-type-btn" class="link_btn" >資料類型</a></li>
+		  	<li><a id="data-field-btn" class="link_btn" >技術領域</a></li>
+		  	<li><a id="discussion-btn" class="link_btn" >討論區</a></li>
+		  	<li class="dropdown">
+		      <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">下載區<span class="caret"></span></a>
+		      <ul class="dropdown-menu">	
+		        <li><a href="#">聯盟中心教材</a></li>
+		        <li><a href="#">國內廠商資料</a></li>
+		        <li><a href="#">APP下載</a></li>		    
+		      </ul>
+		    </li>
+		  	
+		  	
 		    <li class="dropdown">
 		      <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">選單<span class="caret"></span></a>
 		      <ul class="dropdown-menu">
+		      	<li><a class="link_btn" >上傳文件</a></li>
+		      	<li><a class="link_btn" >管理面板</a></li>
 		        <li><a href="#">帳戶</a></li>
 		        <li><a href="#">我的文章</a></li>
 		        <li role="separator" class="divider"></li>
 		        <li><a href="#">聯絡我們</a></li>
 		      </ul>
 		    </li>
+		    <li><a href=""><i class="fa fa-globe" aria-hidden="true"></i> English</a></li>
+		    <li>
+		  		<button type="button" class="btn btn-default navbar-btn">登入</button>
+		  	</li>
+		  	<li>
+		  		<button type="button" class="btn btn-success navbar-btn">註冊</button>
+		  	</li>
 		  </ul>
 		</div><!-- /.navbar-collapse -->
 
