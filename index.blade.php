@@ -90,7 +90,7 @@
 
 	<div id="banner" class="container">
 		<div id="statistic" class="cardview">
-			<h4 ><i class="fa fa-bullhorn" aria-hidden="true"></i> 歡迎使用生產力4.0資料庫，目前資料: 15,125,124 筆資料</h4>
+			<h4 ><i class="fa fa-bullhorn" aria-hidden="true"></i> 歡迎使用生產力4.0資料庫，目前資料: <?php echo $paperCount?> 筆資料</h4>
 		</div>
 	</div>
 
