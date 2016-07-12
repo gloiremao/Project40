@@ -23,7 +23,7 @@ $(document).ready(function(){
         }, 500, 'easeInOutExpo');
 		$("#serach_results").html("");
         var keywords = $("#input-search").val();
-        $("#show_serach_keywords").append(keywords);
+        $("#show_serach_keywords").html("搜尋結果: "+keywords);
         if(keywords.length > 0 ){
         	search(keywords);
         }
