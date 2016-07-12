@@ -56,7 +56,7 @@
 .side-menu .navbar-nav li a {
   padding: 15px;
 }
-.side-menu .navbar-nav li a .glyphicon {
+.side-menu .navbar-nav li a i {
   padding-right: 10px;
 }
 .side-menu #dropdown {
@@ -348,4 +348,19 @@
   #dropdown .panel-body .navbar-nav {
     margin: 0;
   }
+}
+
+.row label {
+  color: #1b4569;
+}
+
+.side-menu .navbar-nav li a {
+  cursor: pointer;
+}
+
+.cardview {
+  padding: 20px;
+  margin-bottom: 20px;
+  background-color: white;
+  box-shadow:4px 4px 12px -2px rgba(20%,20%,40%,0.5);
 }

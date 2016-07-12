@@ -53,25 +53,24 @@
 			    <div class="side-menu-container">
 			        <ul class="nav navbar-nav">
 
-			            <li><a href="#"><span class="glyphicon glyphicon-send"></span> Link</a></li>
-			            <li class="active"><a href="#"><span class="glyphicon glyphicon-plane"></span> Active Link</a></li>
-			            <li><a href="#"><span class="glyphicon glyphicon-cloud"></span> Link</a></li>
+			            <li class="active side-btn" target="add-new"><a><i class="fa fa-upload" aria-hidden="true"></i> 新增資料</a></li>
+			            <li class="side-btn" target="upload"><a ><i class="fa fa-upload" aria-hidden="true"></i> 上傳大量資料</a></li>
 
 			            <!-- Dropdown-->
 			            <li class="panel panel-default" id="dropdown">
 			                <a data-toggle="collapse" href="#dropdown-lvl1">
-			                    <span class="glyphicon glyphicon-user"></span> Sub Level <span class="caret"></span>
+			                    <i class="fa fa-check-square-o" aria-hidden="true"></i> 審核區<span class="caret"></span>
 			                </a>
 
 			                <!-- Dropdown level 1 -->
 			                <div id="dropdown-lvl1" class="panel-collapse collapse">
 			                    <div class="panel-body">
 			                        <ul class="nav navbar-nav">
-			                            <li><a href="#">Link</a></li>
-			                            <li><a href="#">Link</a></li>
-			                            <li><a href="#">Link</a></li>
+			                            <li class="side-btn" target="#"><a >人員審核</a></li>
+			                            <li class="side-btn" target="#"><a >文章審核</a></li>
+			                            <li class="side-btn" target="#"><a >意見審核</a></li>
 
-			                            <!-- Dropdown level 2 -->
+			                            <!-- Dropdown level 2 
 			                            <li class="panel panel-default" id="dropdown">
 			                                <a data-toggle="collapse" href="#dropdown-lvl2">
 			                                    <span class="glyphicon glyphicon-off"></span> Sub Level <span class="caret"></span>
@@ -85,13 +84,13 @@
 			                                        </ul>
 			                                    </div>
 			                                </div>
-			                            </li>
+			                            </li>-->
 			                        </ul>
 			                    </div>
 			                </div>
 			            </li>
 
-			            <li><a href="#"><span class="glyphicon glyphicon-signal"></span> Link</a></li>
+			            <li class="side-btn" target="#"><a ><i class="fa fa-bar-chart" aria-hidden="true"></i> 網站報表</a></li>
 
 			        </ul>
 			    </div><!-- /.navbar-collapse -->
@@ -102,16 +101,153 @@
     	<!-- Main Content -->
     	<div class="container-fluid">
 	        <div class="side-body">
-	           <h1> Main Content here </h1>
-	           <pre> Resize the screen to view the left slide menu </pre>
-	           <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
-	           <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
-	           <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
-	           <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
-	           <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
-	           <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
-	           <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
-           
+	           	<h1> 生產力4.0 控制面板 </h1>
+	           	<pre> 歡迎使用生產力4.0控制面板! </pre>
+	           
+	        	<div id="add-new" class="side-body-tab cardview">
+	        		<!-- Page Heading -->
+	                <div class="row">
+	                    <div class="col-lg-12 ">
+	                        <h4 class="page-header">
+	                            新增資料
+	                        </h4>
+	                    </div>
+	                </div>
+	                <!-- /.row -->
+	                <div class="row">
+	                	<div class="col-lg-6">
+
+	                        <form role="form">
+	                            <div class="form-group">
+	                                <label>標題</label>
+	                                <input class="form-control" placeholder="標題">
+	                            </div>
+
+	                            <div class="form-group">
+	                                <label>連結網址</label>
+	                                <input class="form-control" placeholder="請填入資料連結">
+	                            </div>
+
+	                            <div class="form-group">
+	                                <label>作者</label>
+	                                <input class="form-control" placeholder="請填入作者">
+	                                <p class="help-block">如果有多位作者，請以","隔開</p>
+	                            </div>
+
+	                            <div class="form-group">
+	                                <label>國家</label>
+	                                <input class="form-control" placeholder="請填入此資料出處國家">
+	                            </div>
+
+	                            <div class="form-group">
+	                                <label>發佈日期</label>
+	                                <input class="form-control" placeholder="請填入此資料發佈日期">
+	                            </div>
+
+	                            <div class="form-group">
+	                                <label>發佈出處以及單位</label>
+	                                <input class="form-control" placeholder="請填入此資料發佈出處">
+	                                <input class="form-control" placeholder="請填入此資料發佈單位">
+	                            </div>
+
+	                            <div class="form-group">
+	                                <label>作者</label>
+	                                <input class="form-control" placeholder="請填入資料關鍵字">
+	                                <p class="help-block">如果有多個關鍵字，請以","隔開</p>
+	                            </div>
+
+	                            <div class="form-group">
+	                                <label>等級</label>
+	                                <div class="radio">
+	                                    <label>
+	                                        <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>初級
+	                                    </label>
+	                                </div>
+	                                <div class="radio">
+	                                    <label>
+	                                        <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">中級
+	                                    </label>
+	                                </div>
+	                                <div class="radio">
+	                                    <label>
+	                                        <input type="radio" name="optionsRadios" id="optionsRadios3" value="option3">高級
+	                                    </label>
+	                                </div>
+	                            </div>
+
+	                           
+	                            <div class="form-group">
+	                                <label>LC&amp;VS</label>
+	                                <select class="form-control">
+	                                	<option>All</option>
+	                                    <option>Development</option>
+	                                    <option>Instance: maintenance/usage</option>
+	                                    <option>Instance:Production</option>
+	                                    <option>Instance:maintenance/usage</option>
+	                                </select>
+	                            </div>
+
+	                            <div class="form-group">
+	                                <label>Vertical Layers</label>
+	                                <select class="form-control">
+	                                	<option>All</option>
+	                                    <option>Asset</option>
+	                                    <option>Integration</option>
+	                                    <option>Communication</option>
+	                                    <option>Information</option>
+	                                    <option>Functional</option>
+	                                    <option>Business</option>
+	                                </select>
+	                            </div>
+
+	                            <div class="form-group">
+	                                <label>Horizontal Layers</label>
+	                                <select class="form-control">
+	                                	<option>All</option>
+	                                	<option>Product</option>
+	                                    <option>Field Device</option>
+	                                    <option>Control Device</option>
+	                                    <option>Station</option>
+	                                    <option>Work Centers</option>
+	                                    <option>Enterprise</option>
+	                                    <option>Connected World</option>
+	                                </select>
+	                            </div>
+
+	                            <button type="submit" class="btn btn-success">送出</button>
+
+	                        </form>
+
+	                    </div>
+	                </div>
+	        	</div>
+
+           		<div id="upload" class="side-body-tab cardview" style="display:none">
+           			<!-- Page Heading -->
+	                <div class="row">
+	                    <div class="col-lg-12 ">
+	                        <h4 class="page-header">
+	                            上傳大量資料
+	                        </h4>
+	                        <p>注意! 此處只支援特定格式之Excel資料上傳!</p>
+	                    </div>
+	                </div>
+	                <!-- /.row -->
+	                <div class="row">
+	                	<div class="col-lg-6">
+
+                        	<form role="form">
+                        		<div class="form-group">
+	                                <label>上傳excel檔案</label>
+	                                <input type="file">
+	                                
+	                            </div>
+	                            <button type="submit" class="btn btn-default">上傳資料</button>
+                        	</form>
+
+                        </div>
+	                </div>
+           		</div>
         	</div>
     	</div>
 	</div>

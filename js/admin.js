@@ -1,3 +1,16 @@
+$(document).ready(function(){
+
+    $("li.side-btn").click(function(e){
+        $("li.side-btn").removeClass('active');
+        $(this).addClass('active');
+        var target = $(this).attr("target");
+        $(".side-body-tab").hide();
+        $("#"+target).show();
+
+    });
+
+});
+
 $(function () {
     $('.navbar-toggle').click(function () {
         $('.navbar-nav').toggleClass('slide-in');
