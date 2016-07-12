@@ -28,7 +28,7 @@ $(document).ready(function(){
 		cur_iter = 0;
 		count = 0;
         var keywords = $("#input-search").val();
-        $("#show_serach_keywords").html("搜尋結果: " + keywords);
+        $("#show_serach_keywords").html("搜尋結果: "+keywords);
         if(keywords.length > 0 ){
         	search(keywords);
         }
