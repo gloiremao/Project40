@@ -15,10 +15,22 @@
 	<div id="paper" <?php echo 'data-target="{$paper->id}"' ?> class="container cardview">
 		<div class="page-header">
 		  	<h3 class="paper-title"><a <?php echo "href='{$paper->link}'" ?> ><i class="fa fa-file-text-o" aria-hidden="true"></i> <?php echo $paper->title ?></a></h3>
-		  	<p>關鍵字: <?php echo $paper->keywords ?></p>
+		  	<p>關鍵字: 
+		  		<?php 
+		  			$keywords_arr = explode(",", $paper->keywords);
+		  			foreach ($keywords_arr as $i => $keyword) {
+		  				if($i != 0) echo ", ";
+		  				echo $keyword;
+		  			}
+		  		?>		  		
+		  	</p>
 		</div>
 		<div class="paper-info">
 			<table class="paper-table">
+			  <tr>
+			    <td class="table-title">摘要</td>
+			    <td class="table-info"><?php echo $paper->abstract ?></td>
+			  </tr>
 			  <tr>
 			    <td class="table-title">連結網址</td>
 			    <td class="table-info"><?php echo "<a href='{$paper->link}'>{$paper->link}</a>" ?></td>
@@ -45,7 +57,15 @@
 			  </tr>
 			  <tr>
 			    <td class="table-title">關鍵字</td>
-			    <td class="table-info"><?php echo $paper->keywords ?></td>
+			    <td class="table-info">
+				    <?php 
+			  			$keywords_arr = explode(",", $paper->keywords);
+			  			foreach ($keywords_arr as $i => $keyword) {
+			  				if($i != 0) echo ", ";
+			  				echo $keyword;
+			  			}
+		  			?>
+			    </td>
 			  </tr>
 			  <tr>
 			    <td class="table-title">等級</td>
