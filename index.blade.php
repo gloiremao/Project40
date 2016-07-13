@@ -105,7 +105,7 @@
 			<div class="list-group">
 			  <?php 
 						foreach ($papers as $paper) {
-							echo "<a data-target='{$paper->id}' href='view?id={$paper->id}' class='list-group-item'>
+							echo "<a data-target='{$paper->id}' target='_blank' href='view?id={$paper->id}' class='list-group-item'>
 								    <h4 class='list-group-item-heading'>{$paper->title}</h4>
 								    <p class='list-group-item-text'>{$paper->authors}</p>
 								  </a>";
@@ -122,7 +122,7 @@
 			<div class="list-group">
 			  <?php 
 						foreach ($papers as $paper) {
-							echo "<a data-target='{$paper->id}' href='view?id={$paper->id}' class='list-group-item'>
+							echo "<a data-target='{$paper->id}' target='_blank' href='view?id={$paper->id}' class='list-group-item'>
 								    <h4 class='list-group-item-heading'>{$paper->title}</h4>
 								    <p class='list-group-item-text'>{$paper->authors}</p>
 								  </a>";

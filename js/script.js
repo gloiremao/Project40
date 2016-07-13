@@ -171,7 +171,7 @@ function appendResultHTML(paper_id,paper_url,paper_title,paper_authors,paper_inf
 
 	var results_html = "<div data-target='"+paper_id
 	+"' class='papers'><a href='"+paper_url
-	+"'><h4 data-type='title' class='list-group-item-heading'>"+type_icon+" " + paper_title
+	+"' target='_blank'><h4 data-type='title' class='list-group-item-heading'>"+type_icon+" " + paper_title
 	+"</h4></a><p data-type='author' class='list-group-item-text author'>"+paper_authors
 	+"</p><p data-type='detail-info' class='list-group-item-text'>"+paper_info
 	+"</p><button type='button' data-target='"+paper_id

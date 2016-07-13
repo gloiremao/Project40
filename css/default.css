@@ -1,3 +1,4 @@
+
 #search-area {
 	margin-top: 0px;
 	margin-bottom: 0px;
@@ -176,6 +177,10 @@ nav li{
 
 	.navbar-brand {
 		font-size: 18px;
+	}
+	
+	h4 {
+		font-size: 20px;
 	}
 }
 

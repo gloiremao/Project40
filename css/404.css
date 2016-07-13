@@ -1,0 +1,18 @@
+#top-intro {
+	font-family: "Microsoft YaHei";
+	color: white;
+	font-style: bold;
+	text-align: center;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+#logo404 {
+	height: 500px;
+	background-image: url(../img/uc.png);
+	background-size: contain;
+	background-position: center;
+	background-repeat: no-repeat;
+	padding-bottom: 20px;
+	margin-bottom: 20px;
+}
