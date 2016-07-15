@@ -67,10 +67,30 @@
 	</nav>
 
 	<header>
-		<div id="header-blur">
-			<div class="container">
-				
+		<div id="header-blur" >
+			<div id="login-wrapper" class="col-md-4 col-md-offset-4">
+				<div class="org-line"></div>
+				<div id="login-area" class="cardview">
+					<div class="page-header">
+						<h4>生產力4.0知識庫</h4>
+					</div>
+					<form>
+					  <div class="form-group">
+					    <label for="exampleInputEmail1">帳號</label>
+					    <input type="account" class="form-control" id="exampleInputEmail1" placeholder="聯盟會員帳號">
+					  </div>
+					  <div class="form-group">
+					    <label for="exampleInputPassword1">密碼</label>
+					    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="使用者密碼">
+					  </div>
+					  <button type="submit" class="btn btn-success btn-lg btn-block">登入</button>
+					  <p>
+					  	<a href="forget">忘記密碼</a>? 或是點此<a href="register">註冊</a> 
+					  </p>
+					</form>
+				</div>
 			</div>
+			
 		</div>	
 	</header>
 

@@ -9,16 +9,30 @@ header {
 }
 
 #header-blur {
-	width: 100%;
 	height: 100%;
 	background-color: rgba(128, 128, 128, 0.5); 
 }
 
 #top-logo {
-	width: 200px;
-	height: 200px;
+	width: 100px;
+	height: 100px;
 }
 
 .navbar {
 	margin-bottom: 0px;
+}
+#login-wrapper {
+	margin-top: 100px;
+	float: right;
+	margin-right: 50px;
+}
+
+#login-area {
+	
+	height: 400px;
+	background-color: #FFF;
+}
+
+#login-area h4 {
+	text-align: center;
 }
