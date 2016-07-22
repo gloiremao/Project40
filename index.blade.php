@@ -22,7 +22,7 @@
 					<div id="search-area" class="col-md-8 col-md-offset-2">
 			    		<div class="input-group input-group-lg">
 			    			<span class="input-group-btn">
-						        <button id="smart-btn" class="btn btn-primary" type="button">分類搜尋</button>
+						        <button id="smart-btn" class="btn btn-primary" type="button">進階搜尋</button>
 						    </span>
 			      			<input id="input-search" type="text" class="form-control" placeholder="搜尋..." onkeypress="return onEnterPress(event)">
 			      			<span class="input-group-btn">
@@ -35,9 +35,14 @@
 									資料類型 <span class="caret"></span>
 								</button>
 								<ul class="dropdown-menu">
-									<li><a href="#">Action</a></li>
-									<li><a href="#">Another action</a></li>
-									<li><a href="#">Something else here</a></li>
+									<li><a href="#">論文</a></li>
+									<li><a href="#">簡報</a></li>
+									<li><a href="#">影片</a></li>
+									<li><a href="#">公告</a></li>
+									<li><a href="#">專利</a></li>
+									<li><a href="#">標準</a></li>
+									<li><a href="#">型錄</a></li>
+									<li><a href="#">其它</a></li>
 									<li role="separator" class="divider"></li>
 									<li><a href="#">不指定</a></li>
 								</ul>
@@ -47,9 +52,9 @@
 									國家 <span class="caret"></span>
 								</button>
 								<ul class="dropdown-menu">
-									<li><a href="#">Action</a></li>
-									<li><a href="#">Another action</a></li>
-									<li><a href="#">Something else here</a></li>
+									<li><a href="#">台灣</a></li>
+									<li><a href="#">德國</a></li>
+									<li><a href="#">美國</a></li>
 									<li role="separator" class="divider"></li>
 									<li><a href="#">不指定</a></li>
 								</ul>
@@ -59,9 +64,14 @@
 									技術領域 <span class="caret"></span>
 								</button>
 								<ul class="dropdown-menu">
-									<li><a href="#">Action</a></li>
-									<li><a href="#">Another action</a></li>
-									<li><a href="#">Something else here</a></li>
+									<li><a href="#">IoT</a></li>
+									<li><a href="#">Big Data</a></li>
+									<li><a href="#">數位製造</a></li>
+									<li><a href="#">Sensor Network</a></li>
+									<li><a href="#">CPS</a></li>
+									<li><a href="#">工業網路</a></li>
+									<li><a href="#">I4</a></li>
+									<li><a href="#">其它</a></li>
 									<li role="separator" class="divider"></li>
 									<li><a href="#">不指定</a></li>
 								</ul>
@@ -71,9 +81,13 @@
 									年分 <span class="caret"></span>
 								</button>
 								<ul class="dropdown-menu">
-									<li><a href="#">Action</a></li>
-									<li><a href="#">Another action</a></li>
-									<li><a href="#">Something else here</a></li>
+									<li><a href="#">2016年</a></li>
+									<li><a href="#">2015年以後</a></li>
+									<li><a href="#">2014年以後</a></li>
+									<li><a href="#">2013年以後</a></li>
+									<li><a href="#">2012年以後</a></li>
+									<li><a href="#">2010年以後</a></li>
+									<li><a href="#">2005年以後</a></li>
 									<li role="separator" class="divider"></li>
 									<li><a href="#">不指定</a></li>
 								</ul>
@@ -159,10 +173,20 @@
 		<div class="page-header">
 		  <h4 id="show_serach_keywords" class="section-title"><i class="fa fa-search" aria-hidden="true"></i> 搜尋結果: </h4>
 		</div>
+		<div id="loading" class="bubblingG">
+			<span id="bubblingG_1">
+			</span>
+			<span id="bubblingG_2">
+			</span>
+			<span id="bubblingG_3">
+			</span>
+		</div>	
+		<div id="serach_results" class="list-group">
 			
-		<div id="serach_results" class="list-group"></div>
+			
+		</div>
 
-		<div class="col-md-6 col-md-offset-4">
+		<div class="col-md-10">
 			<nav >
 			  <ul id="serach-nav" class="pagination">
 			    

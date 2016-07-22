@@ -1,101 +1,32 @@
-$(document).ready(function(){
-
-	//bind focus event trigger on input area
-	
-
-	/*$('#input-search').bind('focus', function(event) {
-        $('html, body').stop().animate({
-            scrollTop: $('#search-area').offset().top - 15
-        }, 500, 'easeInOutExpo');
-        event.preventDefault();
-    });*/
-
-
-	//handle search 
-	$("#search_btn").click(function(){
-		var keywords = $("#input-search").val();
-		if(keywords.length > 0 ){
-        	$("#statistic").hide();
-			$("#results-area").css("height","auto");
-			$("#results-area").show();
-			$("#loading").show();
-			$("#info-area").animate({height:'0px'},500,function(){
-				$("#info-area").hide();
-			});
-			$('html, body').stop().animate({
-	            scrollTop: $('#search-area').offset().top -15
-	        }, 500, 'easeInOutExpo');
-			// clear
-			$("#serach_results").html("");
-			$("#serach-nav").html("");
-			cur_iter = 0;
-			count = 0;
-	        
-	        $("#show_serach_keywords").html("搜尋結果: "+keywords);
-	        search(keywords);
-        }
-		
-        
-	});
-
-	$("#new-btn").click(function(event){
-		$("#statistic").hide();
-		$("#hot-paper").hide();
-		$("#hot-author").hide();
-		$("#info-area").css("height","auto");
-		$("#info-area").show();
-		$("#new-paper").show();
-		
-		$("#results-area").animate({height:'0px'},500,function(){
-			$("#results-area").hide();
-		});
-		$('html, body').stop().animate({
-            scrollTop: $("#info-area").offset().top -15
-        }, 500, 'easeInOutExpo');
-	})
-
-	$("#hot-btn").click(function(event){
-		$("#statistic").hide();
-		$("#new-paper").hide();
-		$("#info-area").css("height","auto");
-		$("#info-area").show();
-		$("#hot-paper").show();
-		$("#hot-author").show();
-		
-		$("#results-area").animate({height:'0px'},500,function(){
-			$("#results-area").hide();
-		});
-		$('html, body').stop().animate({
-            scrollTop: $("#info-area").offset().top -15
-        }, 500, 'easeInOutExpo');
-	})
-
-	//handle abstract toggle
-	$("button.a_btn").click(function(){
-		var target = $(this).attr("data-target");
-		$("p[data-target="+ target +"]").toggle();
-	});
-
-	$("#smart-btn").click(function(){
-		$("#smart-search").toggle();
-	});
-	
-
-});
-
 var cur_iter = 0;
 var count = 0;
 
+$(document).ready(function(){
+	search("IoT");
+
+	$("#data-nav li a").click(function(){
+		console.log("#data-nav li a");
+		var target = $(this).attr("data-target");
+		$("#data-nav li").removeClass("active");
+		$(this).parent().addClass("active");
+		$("#serach_results").html("");
+		$("#serach-nav").html("");
+		cur_iter = 0;
+		count = 0;
+		search(target);
+	});
+
+});
+
+
 function search(keywords){
 	//search query
-	$.get("search", { query: keywords },
+	$.get("fieldtype/type", { type: keywords },
       	function(response) {
          	//console.log(response);
-         	$("#loading").hide();
          	var papers = JSON.parse(''+response);
-         	$("#show_serach_keywords").append(", 共 " + papers.length + " 筆資料");
+         	$("#field-title").html(keywords+" 類，共 "+papers.length + " 篇")
          	if(papers.length > 10){
-
          		$("#serach-nav").append('<li id="prev" data-target="#" class="disabled" ><a id="page-prev" data-target="#" class="nav-iter" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a></li>');
          	}
          	papers.forEach(function(paper){
@@ -105,14 +36,15 @@ function search(keywords){
 				}
 
 				appendResultHTML(paper.id,paper.id,paper.title,paper.authors,paper.country,paper.abstract,paper.type);
-         		
+				        		
          		count++;
          	});
          	
          	$("#page-0").show();
          	$("li[data-target='0']").addClass("active");
+
          	if(papers.length > 10){
-         		$("#serach-nav").append('<li id="next" ><a id="page-next" class="nav-iter" data-target="'+(cur_iter+1)+'" aria-label="Next"><span aria-hidden="true">&raquo;</span></a></li>');
+         		$("#serach-nav").append('<li id="next" ><a id="page-next" class="nav-iter" data-target="'+(+1)+'" aria-label="Next"><span aria-hidden="true">&raquo;</span></a></li>');
          	}
 
 
@@ -138,9 +70,10 @@ function search(keywords){
 	         			$("#page-next").attr("data-target","#");
 	         		}
 	         		$('html, body').stop().animate({
-			            scrollTop: $("#results-area").offset().top - 15
+			            scrollTop: $("#data-nav").offset().top - 15
 			        }, 500, 'easeInOutExpo');
          		}
+         		
          	});
 
          	//handle abstract toggle
@@ -193,13 +126,3 @@ function appendResultHTML(paper_id,paper_url,paper_title,paper_authors,paper_inf
 	$("#page-"+parseInt(count/10)).append(results_html);
 
 }
-
-function onEnterPress(event){
-	if (event.keyCode == 13) {
-        document.getElementById("search_btn").click();
-        return false;
-    }
-    return true;
-}
-
-

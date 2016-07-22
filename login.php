@@ -20,9 +20,6 @@
 	<link rel="stylesheet" type="text/css" href="css/master.blade.css">
 	<link rel="stylesheet" type="text/css" href="css/login.css">
 
-
-	
-	
 	
 </head>
 

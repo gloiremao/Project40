@@ -49,8 +49,8 @@
 		  <ul class="nav navbar-nav navbar-right">
 		  	
 		  	
-		  	<li><a id="new-btn" class="link_btn" >最新文章</a></li>
-		  	<li><a id="hot-btn" class="link_btn" >熱門文章</a></li>
+		  	<li><a id="/itri" class="link_btn" >最新文章</a></li>
+		  	<li><a id="/itri" class="link_btn" >熱門文章</a></li>
 		  	<li><a id="data-type-btn" href="datatype" class="link_btn" >資料類型</a></li>
 		  	<li><a id="data-field-btn" href="fieldtype" class="link_btn" >技術領域</a></li>
 		  	<li><a id="discussion-btn" href="404" class="link_btn" >討論區</a></li>
