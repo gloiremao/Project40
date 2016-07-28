@@ -21,6 +21,7 @@ body {
 
 #show-papers {
 	margin-top: 20px;
+	min-height: 500px;
 }
 
 .area-hide {

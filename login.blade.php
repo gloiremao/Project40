@@ -49,12 +49,8 @@
 		  
 		  <ul class="nav navbar-nav navbar-right">
 		  	
-		  	<li><a href="#content-area"> 導覽資料庫</a></li>
-		    <li>
-		  		<button type="button" class="btn btn-default navbar-btn">登入</button>
-		  	</li>
 		  	<li>
-		  		<button type="button" class="btn btn-success navbar-btn">註冊</button>
+		  		<a href="register" role="button">註冊</a>
 		  	</li>
 
 		  </ul>
@@ -71,20 +67,61 @@
 					<div class="page-header">
 						<h4>生產力4.0知識庫</h4>
 					</div>
-					<form>
-					  <div class="form-group">
-					    <label for="exampleInputEmail1">帳號</label>
-					    <input type="account" class="form-control" id="exampleInputEmail1" placeholder="聯盟會員帳號">
-					  </div>
-					  <div class="form-group">
-					    <label for="exampleInputPassword1">密碼</label>
-					    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="使用者密碼">
-					  </div>
-					  <button type="submit" class="btn btn-success btn-lg btn-block">登入</button>
-					  <p>
-					  	<a href="forget">忘記密碼</a>? 或是點此<a href="register">註冊</a> 
-					  </p>
-					</form>
+
+
+					<form class="form-horizontal" role="form" method="POST" action="{{ url('/login') }}">
+                        {{ csrf_field() }}
+
+                        <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
+                            <label for="email" class="col-md-4 control-label">電子郵件</label>
+
+                            <div class="col-md-6">
+                                <input id="email" placeholder="email" type="email" class="form-control" name="email" value="{{ old('email') }}">
+
+                                @if ($errors->has('email'))
+                                    <span class="help-block">
+                                        <strong>{{ $errors->first('email') }}</strong>
+                                    </span>
+                                @endif
+                            </div>
+                        </div>
+
+                        <div class="form-group{{ $errors->has('password') ? ' has-error' : '' }}">
+                            <label for="password" class="col-md-4 control-label">密碼</label>
+
+                            <div class="col-md-6">
+                                <input id="password" placeholder="密碼" type="password" class="form-control" name="password">
+
+                                @if ($errors->has('password'))
+                                    <span class="help-block">
+                                        <strong>{{ $errors->first('password') }}</strong>
+                                    </span>
+                                @endif
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="col-md-6 col-md-offset-4">
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox" name="remember"> 保持登入
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="col-md-6 col-md-offset-4">
+                                <button type="submit" class="btn btn-primary">登入
+                                </button>
+
+                                <a class="btn btn-link" href="{{ url('/password/reset') }}">忘記密碼?</a>
+                            </div>
+                        </div>
+                    </form>
+
+
+
 				</div>
 			</div>
 			
@@ -106,7 +143,7 @@
 
 			<div id="new-paper" class="cardview">
 				<div class="page-header">
-				  	<h4 class="section-title"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i> 最新上傳</h4>
+				  	<h4 class="section-title"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i> 推薦閱讀</h4>
 				</div>
 				<div class="list-group">
 				  <a href="#" class="list-group-item">

@@ -69,9 +69,13 @@ nav li{
 	vertical-align: top;
 	text-align: left;
 	font-size: 16px;
-	word-break: break-all;
 	padding-left: 10px;
 	color: black;
+}
+
+.page-header p {
+    font-size: 14px;
+    color: rgb(53, 53, 53);
 }
 
 #input-comment {

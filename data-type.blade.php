@@ -31,6 +31,9 @@
 
 			<div id="show-papers" class="cardview">
 				<!-- paper area -->
+				<div class="page-header section-title">
+					<h4 id="field-title" ></h4>
+				</div>
 				<div id="serach_results" class="list-group">
 					
 

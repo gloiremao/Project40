@@ -62,20 +62,12 @@
 		        <li><a href="404">APP下載</a></li>		    
 		      </ul>
 		    </li>
-		  	
-		  	
-		    <li class="dropdown">
-		      <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">管理員選單<span class="caret"></span></a>
-		      <ul class="dropdown-menu">
-		      	<li><a class="link_btn" >上傳文件</a></li>
-		      	<li><a href="admin" class="link_btn" >管理面板</a></li>
-		        <li><a href="#">帳戶管理</a></li>
-		      </ul>
-		    </li>
+
 		    <li><a href=""><i class="fa fa-globe" aria-hidden="true"></i> English</a></li>
 		    <li class="dropdown">
 		      <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">使用者, 您好<span class="caret"></span></a>
 		      <ul class="dropdown-menu">
+		      	<li><a href="admin" class="link_btn" >管理面板(管理員)</a></li>
 		      	<li><a class="link_btn" >上傳文件</a></li>
 		        <li><a href="#">我的收藏庫</a></li>
 		        <li><a href="#">我的文章</a></li>
@@ -83,7 +75,7 @@
 		        <li><a href="#">使用說明</a></li>
 		        <li><a href="#">聯絡我們</a></li>
 		        <li><a href="#">帳戶管理</a></li>
-		        <li><a href="#">登出</a></li>
+		        <li><a href="logout">登出</a></li>
 		      </ul>
 		    </li>
 		  </ul>

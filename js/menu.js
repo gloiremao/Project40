@@ -9,6 +9,7 @@ $(document).ready(function(){
 		$("#data-nav li").removeClass("active");
 		$(this).parent().addClass("active");
 		$("#serach_results").html("");
+		$("#serach_results").css("height","50%");
 		$("#serach-nav").html("");
 		cur_iter = 0;
 		count = 0;

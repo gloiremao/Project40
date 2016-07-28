@@ -42,6 +42,7 @@
 									<li><a href="#">專利</a></li>
 									<li><a href="#">標準</a></li>
 									<li><a href="#">型錄</a></li>
+									<li><a href="#">書籍</a></li>
 									<li><a href="#">其它</a></li>
 									<li role="separator" class="divider"></li>
 									<li><a href="#">不指定</a></li>

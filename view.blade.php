@@ -29,7 +29,7 @@
 			<table class="paper-table">
 			  <tr>
 			    <td class="table-title">摘要</td>
-			    <td class="table-info"><?php echo $paper->abstract ?></td>
+			    <td class="table-info"><p><?php echo $paper->abstract ?></p></td>
 			  </tr>
 			  <tr>
 			    <td class="table-title">連結網址</td>
