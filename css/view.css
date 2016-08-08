@@ -1,3 +1,13 @@
+#like {
+	margin-top: 65px;
+}
+
+@media screen and (max-width: 768px) {
+	#like {
+		margin-top: 0px;
+	}
+}
+
 #icon {
 	height: 100%;
 }

@@ -51,3 +51,51 @@ body {
 .section-title {
 	margin-top: 0px;
 }
+
+#search-wrapper{
+	width: 100%;
+	height: 300px;
+	background-image: url(../img/header-cover.jpg);
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+#header-blur {
+	width: 100%;
+	height: 100%;
+	background-color: rgba(128, 128, 128, 0.5); 
+}
+
+#smart-search {
+	padding-top: 10px;
+    background-color: rgb(255, 255, 255);
+    padding-left: 10px;
+    padding-bottom: 10px;
+    margin-right: 49px;
+}
+
+.navbar {
+	margin-bottom: 0px;
+}
+
+
+#search-area {
+	margin-top: 150px;
+	margin-bottom: 0px;
+}
+
+#search-area input{
+	background-color: white;
+	padding-left: 5px;
+}
+
+.section-title {
+    color: #008bf1;
+}
+
+#info-area{
+    margin-top: 0px;
+    padding-top: 20px;
+    height: auto;
+}

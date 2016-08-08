@@ -81,6 +81,8 @@ function search(keywords){
 				var target = $(this).attr("data-target");
 				$("p[data-target="+ target +"]").toggle();
 			});
+
+			$("#field-title").html(keywords+" 類，共 "+papers.length + " 篇")
       	}
    	);
 }

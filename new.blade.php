@@ -5,20 +5,20 @@
 @stop
 
 @section('include-js')
-	<script type="text/javascript" src="js/menu.js"></script>
 	<script type="text/javascript" src="js/script.js"></script>
 @stop
 
 
 @section('content')
 	@parent
+	
 
 	<div id="search-wrapper">
 		<div id="header-blur">
 			<div class="container">
 				<div class="row">
 					<div id="search-area" class="col-md-8 col-md-offset-2">
-						<form action="search">
+			    		<form action="search">
 				    		<div class="input-group input-group-lg">
 				    			<span class="input-group-btn">
 							        <button id="smart-btn" class="btn btn-primary" type="button">進階搜尋</button>
@@ -87,56 +87,39 @@
 						  		
 				    		</div>
 				    	</form>
-				  	</div><!-- /.col-lg-6 -->
+			    		
+			  		</div><!-- /.col-lg-6 -->
 			  		
 				</div>
 			</div>
 		</div>	
 	</div>
 
-	<div class="page-container">
-	    
-	    <div class="container">
-	    	<div class="page-header">
-			  	<h4 class="section-title"><i class="fa fa-file" aria-hidden="true"></i> 資料類型</h4>
+	<div id="content-area">
+		
+		<div id="info-area" class="container">
+			
+			<div id="new-tab" class="cardview info-tab">
+				<div class="page-header">
+				  	<h4 class="section-title"><i class="fa fa-bolt" aria-hidden="true"></i> 最新上傳</h4>
+				</div>
+				<div class="list-group">
+				  <?php 
+							foreach ($papers as $paper) {
+								echo "<a data-target='{$paper->id}' target='_blank' href='view?id={$paper->id}' class='list-group-item'>
+									    <h4 class='list-group-item-heading'>{$paper->title}</h4>
+									    <p class='list-group-item-text'>{$paper->authors}</p>
+									  </a>";
+							}
+							
+						?>
+				</div>
 			</div>
-
-	    	<ul id="data-nav" class="nav nav-tabs">
-				<li role="presentation" class="active"><a data-target="論文" class="link_btn"><i class='fa fa-file-text-o' aria-hidden='true'></i> 論文</a></li>
-			  	<li role="presentation"><a data-target="簡報" class="link_btn"><i class='fa fa-file-powerpoint-o' aria-hidden='true'></i> 簡報</a></li>
-			  	<li role="presentation"><a data-target="影片" class="link_btn"><i class="fa fa-file-video-o" aria-hidden="true"></i> 影片</a></li>
-			  	<li role="presentation"><a data-target="公告" class="link_btn"><i class="fa fa-file-o" aria-hidden="true"></i> 公告</a></li>
-			  	<li role="presentation"><a data-target="專利" class="link_btn"><i class="fa fa-file-o" aria-hidden="true"></i> 專利</a></li>
-			  	<li role="presentation"><a data-target="標準" class="link_btn"><i class="fa fa-file-o" aria-hidden="true"></i> 標準</a></li>
-			  	<li role="presentation"><a data-target="型錄" class="link_btn"><i class="fa fa-files-o" aria-hidden="true"></i> 型錄</a></li>
-			  	<li role="presentation"><a data-target="其它" class="link_btn"><i class="fa fa-file-o" aria-hidden="true"></i> 其它</a></li>
-			</ul>
-
-			<div id="show-papers" class="cardview">
-				<!-- paper area -->
-				<div class="page-header section-title">
-					<h4 id="field-title" ></h4>
-				</div>
-				<div id="serach_results" class="list-group">
-					
-
-				</div>
-
-				<!-- page index -->
-				<div class="col-md-10">
-					<nav >
-					  <ul id="serach-nav" class="pagination">
-					    
-					  </ul>
-					</nav>
-				</div>
-
-			</div>
-
-	  	</div><!--/.container-->
-
-
-	</div><!--/.page-container-->
 	
+
+
+		</div>
+
+	</div>
 
 @stop

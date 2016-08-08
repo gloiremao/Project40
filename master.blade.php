@@ -15,7 +15,7 @@
 	<link rel="stylesheet" type="text/css" href="bootstrap/bootstrap.min.css">
 	
 
-	
+	<link rel="stylesheet" href="css/bootstrap-select.css">
 	<link rel="stylesheet" href="css/footer.css">
 	@yield('include-css')
 	<link rel="stylesheet" href="css/master.blade.css">
@@ -49,8 +49,8 @@
 		  <ul class="nav navbar-nav navbar-right">
 		  	
 		  	
-		  	<li><a id="new-btn" class="link_btn" >最新文章</a></li>
-		  	<li><a id="hot-btn" class="link_btn" >熱門文章</a></li>
+		  	<li><a id="new-btn" href="new" >最新文章</a></li>
+		  	<li><a id="hot-btn" href="popular" >熱門文章</a></li>
 		  	<li><a id="data-type-btn" href="datatype" class="link_btn" >資料類型</a></li>
 		  	<li><a id="data-field-btn" href="fieldtype" class="link_btn" >技術領域</a></li>
 		  	<li><a id="discussion-btn" href="404" class="link_btn" >討論區</a></li>
@@ -74,7 +74,7 @@
 		        <li role="separator" class="divider"></li>
 		        <li><a href="#">使用說明</a></li>
 		        <li><a href="#">聯絡我們</a></li>
-		        <li><a href="#">帳戶管理</a></li>
+		        <li><a href="account">帳戶管理</a></li>
 		        <li><a href="logout">登出</a></li>
 		      </ul>
 		    </li>
@@ -127,7 +127,8 @@
 	<!-- Latest compiled and minified JavaScript -->
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
 	<script type="text/javascript" src="js/jquery.easing.min.js"></script>
-
+	<script src="js/bootstrap-select.js"></script>
+	
 	@yield('include-js')
 
 </body>

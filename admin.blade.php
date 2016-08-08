@@ -235,7 +235,21 @@
 	                <!-- /.row -->
 	                <div class="row">
 	                	<div class="col-lg-6">
+				{!! Form::open(
+				    array(
+				        'url' => 'uploadByExcel',
+				        'files' => true)) !!}
 
+				<div class="form-group">
+				    {!! Form::label('上傳excel檔案') !!}
+				    {!! Form::file('image', null) !!}
+				</div>
+
+				<div class="form-group">
+				    {!! Form::submit('上傳資料') !!}
+				</div>
+				{!! Form::close() !!}
+				<!--
                         	<form role="form">
                         		<div class="form-group">
 	                                <label>上傳excel檔案</label>
@@ -244,7 +258,7 @@
 	                            </div>
 	                            <button type="submit" class="btn btn-default">上傳資料</button>
                         	</form>
-
+				-->
                         </div>
 	                </div>
            		</div>

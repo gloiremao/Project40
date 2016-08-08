@@ -2,7 +2,7 @@ var cur_iter = 0;
 var count = 0;
 
 $(document).ready(function(){
-	search("論文");
+	getPaper("論文");
 
 	$("#data-nav li a").click(function(){
 		var target = $(this).attr("data-target");
@@ -13,14 +13,14 @@ $(document).ready(function(){
 		$("#serach-nav").html("");
 		cur_iter = 0;
 		count = 0;
-		search(target);
+		getPaper(target);
 	});
 
 });
 
 
-function search(keywords){
-	//search query
+function getPaper(keywords){
+	//getPaper query
 	$.get("datatype/type", { type: keywords },
       	function(response) {
          	//console.log(response);
@@ -125,4 +125,12 @@ function appendResultHTML(paper_id,paper_url,paper_title,paper_authors,paper_inf
 
 	$("#page-"+parseInt(count/10)).append(results_html);
 
+}
+
+function onEnterPress(event){
+	if (event.keyCode == 13) {
+        document.getElementById("search_btn").click();
+        return false;
+    }
+    return true;
 }

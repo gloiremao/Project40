@@ -13,7 +13,7 @@
 <div id="content-area">
 	
 	<div id="paper" <?php echo 'data-target="{$paper->id}"' ?> class="container cardview">
-		<div class="page-header">
+		<div class="page-header col-md-11">
 		  	<h3 class="paper-title"><a <?php echo "href='{$paper->link}'" ?> ><i class="fa fa-file-text-o" aria-hidden="true"></i> <?php echo $paper->title ?></a></h3>
 		  	<p>關鍵字: 
 		  		<?php 
@@ -24,6 +24,9 @@
 		  			}
 		  		?>		  		
 		  	</p>
+		</div>
+		<div id="like" class="col-md-1">
+		  	<button type="button" class="btn btn-danger"><i class="fa fa-heart" aria-hidden="true"></i> 收藏</button>
 		</div>
 		<div class="paper-info">
 			<table class="paper-table">
