@@ -11,7 +11,6 @@ $(document).ready(function(){
 	$("#smart-btn").click(function(){
 		$("#smart-search").toggle();
 	});
-	
 
 });
 
@@ -22,6 +21,8 @@ function onEnterPress(event){
     }
     return true;
 }
+
+
 
 
 

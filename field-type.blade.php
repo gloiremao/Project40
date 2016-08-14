@@ -28,59 +28,56 @@
 				      			</span>
 				    		</div><!-- /input-group -->
 				    		<div id="smart-search" class="cardview area-hide"> 
+			    			
 				    			<div id="select-type" class="btn-group">
-									
-									<select  class="selectpicker" multiple data-done-button="true">
-									    <option selected>不指定類型</option>
-									    <option>論文</option>
-									    <option>簡報</option>
-									    <option>影片</option>
-									    <option>公告</option>
-									    <option>專利</option>
-									    <option>標準</option>
-									    <option>型錄</option>
-									    <option>書籍</option>
-									    <option>其它</option>
+									<select class="selectpicker" multiple data-actions-box="true" title="指定類型"> 
+									    <option >論文</option>
+									    <option >簡報</option>
+									    <option >影片</option>
+									    <option >公告</option>
+									    <option >專利</option>
+									    <option >標準</option>
+									    <option >型錄</option>
+									    <option >書籍</option>
+									    <option >其它</option>
 									</select>
 								</div>
-								<div class="btn-group">
-									<select  class="selectpicker" multiple data-done-button="true">
-									    <option selected>不指定國家</option>
-									    <option>台灣</option>
-									    <option>德國</option>
-									    <option>英國</option>
-									    <option>法國</option>
-									    <option>美國</option>
-									    <option>日本</option>
-									    <option>義大利</option>
-									    <option>加拿大</option>
-									    <option>中國</option>
+
+								<div id="select-country" class="btn-group">
+									<select  class="selectpicker" multiple data-actions-box="true" title="指定國家" data-live-search="true">
+									    <option >台灣</option>
+									    <option >德國</option>
+									    <option >英國</option>
+									    <option >法國</option>
+									    <option >美國</option>
+									    <option >日本</option>
+									    <option >義大利</option>
+									    <option >加拿大</option>
+									    <option >中國</option>
 									</select>
 								</div>
-								<div class="btn-group">
-									<select  class="selectpicker" multiple data-done-button="true">
-									    <option selected>不指定領域</option>
-									    <option>IoT</option>
-									    <option>Big Date</option>
-									    <option>數位製造</option>
-									    <option>Sensor Network</option>
-									    <option>CPS</option>
-									    <option>工業網路</option>
-									    <option>I4</option>
-									    <option>其它</option>
+								<div id="select-field" class="btn-group">
+									<select  class="selectpicker" multiple data-actions-box="true" title="指定領域">
+									    <option >IoT</option>
+									    <option >Big Date</option>
+									    <option >數位製造</option>
+									    <option >Sensor Network</option>
+									    <option >CPS</option>
+									    <option >工業網路</option>
+									    <option >I4</option>
+									    <option >其它</option>
 									</select>
 								</div>
-								<div class="btn-group">
-									<select  class="selectpicker" multiple data-done-button="true">
-									    <option selected>不指定年分</option>
-									    <option>2016年</option>
-									    <option>2015年以後</option>
-									    <option>2014年以後</option>
-									    <option>2013年以後</option>
-									    <option>2012年以後</option>
-									    <option>2010年以後</option>
-									    <option>2005年以後</option>
-									    <option>2000年以後</option>
+								<div id="select-year" class="btn-group">
+									<select  class="selectpicker" multiple data-actions-box="true" title="指定年份">
+									    <option >2016年</option>
+									    <option >2015年以後</option>
+									    <option >2014年以後</option>
+									    <option >2013年以後</option>
+									    <option >2012年以後</option>
+									    <option >2010年以後</option>
+									    <option >2005年以後</option>
+									    <option >2000年以後</option>
 									</select>
 								</div>
 						  		
