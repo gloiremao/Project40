@@ -27,7 +27,7 @@
 	    
 	    <div id="advance-search" class="row">
 	    	
-	    	<div id="smart-search" class="cardview area-hide"> 
+	    	<div id="smart-search" class="col-md-8 col-md-offset-1 area-hide"> 
 			    			
     			<div id="select-type" class="btn-group">
 					<select class="selectpicker" multiple data-actions-box="true" title="指定類型"> 
@@ -61,6 +61,7 @@
 					    <option >IoT</option>
 					    <option >Big Date</option>
 					    <option >數位製造</option>
+					    <option >資訊安全</option>
 					    <option >Sensor Network</option>
 					    <option >CPS</option>
 					    <option >工業網路</option>

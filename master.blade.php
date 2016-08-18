@@ -3,7 +3,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<title>生產力4.0知識庫</title>
-	
+	<link rel="icon" href="img/icon.ico">
 	<link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
 	
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
@@ -34,7 +34,7 @@
         		<span class="icon-bar"></span>
         		<span class="icon-bar"></span>
       		</button>
-	      <a class="navbar-brand" href="#">
+	      <a class="navbar-brand" href="/itri">
 	        <img id="icon" alt="Brand" src="img/icon.png">
 	      </a>
 	      <a class="navbar-brand" href="/itri">生產力4.0 知識庫</a>
@@ -52,7 +52,7 @@
 		  	<li><a id="new-btn" href="new" >最新文章</a></li>
 		  	<li><a id="hot-btn" href="popular" >熱門文章</a></li>
 		  	<li><a id="data-type-btn" href="datatype" class="link_btn" >資料類型</a></li>
-		  	<li><a id="data-field-btn" href="fieldtype" class="link_btn" >技術領域</a></li>
+		  	<li><a id="data-field-btn" href="technology" class="link_btn" >技術領域</a></li>
 		  	<li><a id="discussion-btn" href="404" class="link_btn" >討論區</a></li>
 		  	<li class="dropdown">
 		      <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">下載區<span class="caret"></span></a>
@@ -115,7 +115,7 @@
 					<p><i class="fa fa-envelope"></i> <a href="mailto:support@company.com">support@company.com</a></p>
 				</div>
 			</div>
-			<p class="footer-company-name">生產力4.0知識庫平台&copy; 2016</p>
+			<p class="footer-company-name">生產力4.0知識庫&copy; 2016 <span> <a href="">License</a></span></p>
 		</div>
 
 

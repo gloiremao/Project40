@@ -1,0 +1,6 @@
+license
+1. laravel
+2. bootstrap 
+3. bootstrap Material Design (MIT)
+4. Font Awesome licensed under SIL OFL 1.1
+5. Icon.png  Icon made by Freepik from www.flaticon.com 

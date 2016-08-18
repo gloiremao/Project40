@@ -446,9 +446,9 @@
       var actionsbox = this.multiple && this.options.actionsBox ?
       '<div class="bs-actionsbox">' +
       '<div class="btn-group btn-group-sm btn-block">' +
-      '<button type="button" class="actions-btn bs-select-all btn btn-default">' +
-      this.options.selectAllText +
-      '</button>' +
+      //'<button type="button" class="actions-btn bs-select-all btn btn-default">' +
+      //this.options.selectAllText +
+      //'</button>' +
       '<button type="button" class="actions-btn bs-deselect-all btn btn-default">' +
       this.options.deselectAllText +
       '</button>' +

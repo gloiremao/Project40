@@ -10,6 +10,10 @@
 @section('content')
 	@parent
 
+	<head>
+		
+	</head>
+
 	<div id="content-area">
 		
 		<div id="info-area" class="container cardview">

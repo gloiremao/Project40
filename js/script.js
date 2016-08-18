@@ -16,10 +16,19 @@ $(document).ready(function(){
 
 function onEnterPress(event){
 	if (event.keyCode == 13) {
-        document.getElementById("search_btn").click();
-        return false;
+		document.getElementById("search_btn").click();
+	    return false;
     }
     return true;
+}
+
+function validateForm() {
+   	var query = $("#input-search").val();
+    if (query == null || query == "") {
+        return false;
+    } else {
+    	return true;
+    }
 }
 
 

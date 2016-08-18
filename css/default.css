@@ -44,22 +44,18 @@ header {
 #header-blur {
 	width: 100%;
 	height: 100%;
-	background-color: rgba(128, 128, 128, 0.5); 
+	background-color: rgba(70, 70, 70, 0.43);
 }
 
 #top-logo {
-	width: 200px;
-	height: 200px;
+	
+	height: 250px;
 }
 
 .navbar {
 	margin-bottom: 0px;
 }
 
-nav li{
-	margin-left: 5px;
-	margin-right: 5px;
-}
 
 .page-header {
 	margin: 20px 0 23px;
@@ -165,6 +161,7 @@ nav li{
 .brand-heading {
 	font-size: 40px;
 	color: white;
+	margin-top: 0px;
 }
 
 .section-title {
@@ -181,7 +178,6 @@ nav li{
 	.brand-heading {font-size: 30px;}
 	header {height: 350px;}
 	#top-logo {
-		width: 175px;
 		height: 175px;
 	}
 
@@ -199,7 +195,6 @@ nav li{
 	.navbar-brand {font-size: 20px;}
 	header {height: 290px;}
 	#top-logo {
-		width: 125px;
 		height: 125px;
 	}
 }

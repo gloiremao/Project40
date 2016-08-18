@@ -1,5 +1,18 @@
+
 .bootstrap-select:not([class*="col-"]):not([class*="form-control"]):not(.input-group-btn) {
 	width: 150px;
+}
+
+.bs-actionsbox .btn-group button {
+	width: 100%;
+}
+
+nav li {
+	font-family: Microsoft JhengHei;
+}
+
+nav .navbar-brand {
+	font-family: Microsoft JhengHei;
 }
 
 #icon {
@@ -12,7 +25,7 @@
 
 footer p {
 	color: white;
-	font-family: "SimHei";
+	font-family: Microsoft JhengHei;
 }
 
 .org-line {
@@ -36,8 +49,8 @@ footer p {
 }
 
 nav li{
-	margin-left: 5px;
-	margin-right: 5px;
+	margin-left: 2px;
+	margin-right: 2px;
 }
 
 .navbar-default .navbar-nav>li>a {
@@ -58,11 +71,14 @@ nav li{
 	.brand-heading {font-size: 30px;}
 	header {height: 350px;}
 	#top-logo {
-		width: 175px;
+		
 		height: 175px;
 	}
 	.navbar-brand {
 		font-size: 18px;
+	}
+	#smart-search button{
+		margin-bottom: 5px;
 	}
 }
 
@@ -71,7 +87,7 @@ nav li{
 	.navbar-brand {font-size: 20px;}
 	header {height: 290px;}
 	#top-logo {
-		width: 125px;
+		
 		height: 125px;
 	}
 }
@@ -210,4 +226,43 @@ nav li{
 
 #loading{
 	display: none;
+}
+
+
+@media (max-width: 991px) {
+    .navbar-header {
+        float: none;
+    }
+    .navbar-toggle {
+        display: block;
+    }
+    .navbar-collapse {
+        border-top: 1px solid transparent;
+        box-shadow: inset 0 1px 0 rgba(255,255,255,0.1);
+    }
+    .navbar-collapse.collapse {
+        display: none!important;
+    }
+    .navbar-nav {
+        float: none!important;
+        margin: 7.5px -15px;
+    }
+    .navbar-nav>li {
+        float: none;
+    }
+    .navbar-nav>li>a {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    .navbar-text {
+        float: none;
+        margin: 15px 0;
+    }
+    /* since 3.1.0 */
+    .navbar-collapse.collapse.in { 
+        display: block!important;
+    }
+    .collapsing {
+        overflow: hidden!important;
+    }
 }

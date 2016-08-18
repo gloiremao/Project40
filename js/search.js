@@ -1,7 +1,15 @@
+var types = [];
+var fields = [];
+var countries = [];
+var years = [];
+var advanced_search = false;
+
 $(document).ready(function(){
 
 	//search
 	var _query = getParameterByName("query");
+	//get advanced search
+	getUrlParameters();
 	$("#input-search").val(_query);
 	search(_query);
 	//handle search 
@@ -19,8 +27,8 @@ $(document).ready(function(){
 			$("#serach-nav").html("");
 			cur_iter = 0;
 			count = 0;
-	        
 	        search(keywords);
+	        
         }
 		
         
@@ -34,6 +42,40 @@ $(document).ready(function(){
 
 });
 
+function isAdvancedSearch(){
+	if( types.length <= 0 && countries.length <= 0 && fields.length <= 0 && years.length <= 0){
+		return false;
+		console.log("normal");
+	} else {
+		return true;
+		console.log("advance");
+	}
+
+}
+
+
+function getUrlParameters() {
+    var sPageURL = decodeURIComponent(window.location.search.substring(1)),
+        sURLVariables = sPageURL.split('&'),
+        sParameterName,
+        i;
+
+    for (i = 0; i < sURLVariables.length; i++) {
+        sParameterName = sURLVariables[i].split('=');
+
+        if (sParameterName[0] === "types") {
+            types.push(sParameterName[1]);
+        }else if (sParameterName[0] === "countries") {
+        	countries.push(sParameterName[1]);
+        }else if (sParameterName[0] === "fields") {
+        	fields.push(sParameterName[1]);
+        }else if (sParameterName[0] === "years") {
+        	years.push(sParameterName[1]);
+        }
+    }
+
+};
+
 function getParameterByName(name, url) {
     if (!url) url = window.location.href;
     name = name.replace(/[\[\]]/g, "\\$&");
@@ -44,14 +86,41 @@ function getParameterByName(name, url) {
     return decodeURIComponent(results[2].replace(/\+/g, " "));
 }
 
+function requestToString(data_array){
+	var string = "";
+	data_array.forEach(function(data){
+		if(string.length == 0){
+			string = "" + data;
+		}else{
+			string = string + "" + data;
+		}
+	});
+	return string;
+}
+
 var cur_iter = 0;
 var count = 0;
 
 function search(keywords){
+	var advance = isAdvancedSearch;
+	var req_types = requestToString(types);
+	var req_fields = requestToString(fields);
+	var req_countries = requestToString(countries);
+	var req_years = requestToString(years);
+	
 	//search query
 	$("#show_serach_keywords").html("搜尋結果: "+keywords);
 	$("#loading").show();
-	$.get("search/query", { query: keywords },
+
+	$.get("search/query", 
+		{ 
+			query: keywords,
+			advance: advance,
+			types: req_types,
+			fields: req_fields,
+			countries: req_countries,
+			years: req_years
+		},
       	function(response) {
          	//console.log(response);
          	searchResultsHandler(response);
@@ -151,6 +220,14 @@ function appendResultHTML(paper_id,paper_url,paper_title,paper_authors,paper_inf
 		type_icon = '<i class="fa fa-file-o" aria-hidden="true"></i>';
 	}
 
+	var show_abstract;
+	if( paper_abstract.length >= 750 ){
+		show_abstract = paper_abstract.substring(0,754) + " ..."
+	}else {
+		show_abstract = paper_abstract;
+	}
+	
+
 	var results_html = "<div data-target='"+paper_id
 	+"' class='papers'><a href='"+paper_url
 	+"' target='_blank'><h4 data-type='title' class='list-group-item-heading'>"+type_icon+" " + paper_title
@@ -158,7 +235,7 @@ function appendResultHTML(paper_id,paper_url,paper_title,paper_authors,paper_inf
 	+"</p><p data-type='detail-info' class='list-group-item-text'>"+paper_info
 	+"</p><button type='button' data-target='"+paper_id
 	+"' class='btn btn-link btn-xs a_btn'>Abstract</button><p data-target='"+paper_id
-	+"' class='list-group-item-text area-hide'>"+paper_abstract+"</p></div>";
+	+"' class='list-group-item-text area-hide'>"+show_abstract+"</p></div>";
 
 	$("#page-"+parseInt(count/10)).append(results_html);
 

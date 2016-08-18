@@ -5,7 +5,7 @@ $(document).ready(function(){
 	search("IoT");
 
 	$("#data-nav li a").click(function(){
-		console.log("#data-nav li a");
+		//console.log("#data-nav li a");
 		var target = $(this).attr("data-target");
 		$("#data-nav li").removeClass("active");
 		$(this).parent().addClass("active");
@@ -21,7 +21,7 @@ $(document).ready(function(){
 
 function search(keywords){
 	//search query
-	$.get("fieldtype/type", { type: keywords },
+	$.get("technology/type", { type: keywords },
       	function(response) {
          	//console.log(response);
          	var papers = JSON.parse(''+response);
