@@ -115,7 +115,8 @@
 					<p><i class="fa fa-envelope"></i> <a href="mailto:support@company.com">support@company.com</a></p>
 				</div>
 			</div>
-			<p class="footer-company-name">生產力4.0知識庫&copy; 2016 <span> <a href="">License</a></span></p>
+			<p class="footer-company-name">生產力4.0知識庫&copy; 2016</p>
+
 		</div>
 
 
