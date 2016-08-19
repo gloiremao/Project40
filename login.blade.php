@@ -2,7 +2,7 @@
 <head>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<title>Industry 4.0</title>
+	<title>智慧製造產業創新知識庫</title>
 	
 	<link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
 	
@@ -38,7 +38,7 @@
 	      <a class="navbar-brand" href="#">
 	        <img id="icon" alt="Brand" src="img/icon.png">
 	      </a>
-	      <a class="navbar-brand" href="#">生產力4.0 知識庫</a>
+	      <a class="navbar-brand" href="#">智慧製造產業創新知識庫</a>
 	    </div>
 
 		<!-- Collect the nav links, forms, and other content for toggling -->
@@ -130,7 +130,8 @@
 
 	<div id="banner" class="container">
 		<div id="statistic" class="cardview">
-			<h4 ><i class="fa fa-bullhorn" aria-hidden="true"></i> 歡迎使用生產力4.0資料庫，目前資料: 15,125,124 筆資料</h4>
+			<h4 ><i class="fa fa-bullhorn" aria-hidden="true"></i> 歡迎使用智慧製造產業創新知識庫
+，目前資料: <?php echo $paperCount?> 筆資料</h4>
 		</div>
 	</div>
 	
@@ -146,11 +147,14 @@
 				  	<h4 class="section-title"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i> 推薦閱讀</h4>
 				</div>
 				<div class="list-group">
-				  <a href="#" class="list-group-item">
-				    <h4 class="list-group-item-heading">New</h4>
-				    <p class="list-group-item-text">Proceedings of the ACM/IEEE SC 2005 Conference.</p>
-				    <p class="list-group-item-text">Yoo, Andy and Chow, Edmond and Henderson, Keith and McLendon, William and Hendrickson, Bruce and Catalyurek, Umit</p>
-				  </a>
+				  	<?php 
+						foreach ($papers as $paper) {
+							echo "<a data-target='{$paper->id}' target='_blank' href='view?id={$paper->id}' class='list-group-item'>
+								    <h4 class='list-group-item-heading'>{$paper->title}</h4>
+								    <p class='list-group-item-text'>{$paper->authors}</p>
+								  </a>";
+						}
+					?>
 				</div>
 			</div>
 
@@ -171,7 +175,7 @@
 		<div class="container">
 			<div class="footer-left">
 
-				<p>指導單位: </p>
+				<p>指導與經費提供單位: </p>
 				<img id="moe" src="img/moe_logo.png">
 
 				
@@ -191,7 +195,7 @@
 				</div>
 			</div>
 
-			<p class="footer-company-name">生產力4.0知識庫平台&copy; 2016 | Web Designed by NMSL, NTHU</p>
+			<p class="footer-company-name">教育部 智慧製造產業創新人才培育計畫 &copy; 2016</p>
 		</div>
 
 

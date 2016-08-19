@@ -1,0 +1,12 @@
+#btn-submit {
+	margin-top: 10px;
+}
+
+body {
+	background-image: url(../img/bg2.png);
+}
+
+.list-group {
+	border: 1px solid rgba(0, 0, 0, 0.15);
+
+}

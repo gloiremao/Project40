@@ -11,7 +11,7 @@
 }
 
 body {
-	background-image: url(../img/ps_neutral.png);
+	background-image: url(../img/bg2.png);
 }
 
 #top-intro {
@@ -48,8 +48,8 @@ header {
 }
 
 #top-logo {
-	
-	height: 275px;
+	visibility: hidden;
+	height: 200px;
 }
 
 .navbar {

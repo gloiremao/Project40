@@ -96,103 +96,24 @@
 
 	<div id="content-area">
 		
-		<div id="info-area" class="container">
+		<div id="forum-area" class="container">
 
-			
-
-			<div id="new-paper" class="cardview">
-				<div class="page-header">
-				  	<h4 class="section-title"><i class="fa fa-bolt" aria-hidden="true"></i> 最新上傳</h4>
-				</div>
-				<div class="list-group">
-				  <a href="#" class="list-group-item">
-				    <h4 class="list-group-item-heading">New</h4>
-				    <p class="list-group-item-text">Proceedings of the ACM/IEEE SC 2005 Conference.</p>
-				    <p class="list-group-item-text">Yoo, Andy and Chow, Edmond and Henderson, Keith and McLendon, William and Hendrickson, Bruce and Catalyurek, Umit</p>
-				  </a>
-				</div>
-			</div>
-
-			<div id="hot-paper" class="cardview">
-				<div class="page-header">
-				  	<h4 class="section-title"><i class="fa fa-sort-amount-desc" aria-hidden="true"></i> 熱門文章</h4>
-				</div>
-				<div class="list-group">
-				  <a href="#" class="list-group-item">
-				    <h4 class="list-group-item-heading">A scalable distributed parallel breadth-first search algorithm on BlueGene/L.</h4>
-				    <p class="list-group-item-text">Proceedings of the ACM/IEEE SC 2005 Conference.</p>
-				    <p class="list-group-item-text">Yoo, Andy and Chow, Edmond and Henderson, Keith and McLendon, William and Hendrickson, Bruce and Catalyurek, Umit</p>
-				  </a>
-				  <a href="#" class="list-group-item">
-				    <h4 class="list-group-item-heading">A scalable distributed parallel breadth-first search algorithm on BlueGene/L.</h4>
-				    <p class="list-group-item-text">Proceedings of the ACM/IEEE SC 2005 Conference.</p>
-				    <p class="list-group-item-text">Yoo, Andy and Chow, Edmond and Henderson, Keith and McLendon, William and Hendrickson, Bruce and Catalyurek, Umit</p>
-				  </a>
-				</div>
-			</div>
-
-			<div id="hot-author" class="cardview">
-				<div class="page-header">
-				  	<h4 class="section-title"><i class="fa fa-user" aria-hidden="true"></i> 熱門作者</h4>
-				</div>
-				<div class="list-group">
-				  <a href="#" class="list-group-item">
-				    <h4 class="list-group-item-heading">A scalable distributed parallel breadth-first search algorithm on BlueGene/L.</h4>
-				    <p class="list-group-item-text">Proceedings of the ACM/IEEE SC 2005 Conference.</p>
-				    <p class="list-group-item-text">Yoo, Andy and Chow, Edmond and Henderson, Keith and McLendon, William and Hendrickson, Bruce and Catalyurek, Umit</p>
-				  </a>
-				  <a href="#" class="list-group-item">
-				    <h4 class="list-group-item-heading">A scalable distributed parallel breadth-first search algorithm on BlueGene/L.</h4>
-				    <p class="list-group-item-text">Proceedings of the ACM/IEEE SC 2005 Conference.</p>
-				    <p class="list-group-item-text">Yoo, Andy and Chow, Edmond and Henderson, Keith and McLendon, William and Hendrickson, Bruce and Catalyurek, Umit</p>
-				  </a>
-				</div>
-			</div>
-			
+			<div class="row cardview">
+				<div class=" col-md-12 form-group">
+					<h4><i class="fa fa-commenting-o" aria-hidden="true"></i> 發表問題</h4>
+	                
+	                <label class="control-label">主旨</label>
+	                <input class="form-control" placeholder="請填入您的問題主旨">
+	                <label class="control-label">內文</label>
+	               	<textarea id="input-comment"class="form-control" rows="3" placeholder="內文"></textarea>
+					<button id="btn-commit" class="btn btn-success" type="submit">發表</button>
+	            </div>
+	        </div>
 			
 			
 		</div>
 
-		<div id="results-area" class="container cardview">
-			<div class="page-header">
-			  <h4 id="show_serach_keywords" class="section-title"><i class="fa fa-search" aria-hidden="true"></i> 搜尋結果: </h4>
-			</div>
-			<div id="loading" class="bubblingG">
-					<span id="bubblingG_1">
-					</span>
-					<span id="bubblingG_2">
-					</span>
-					<span id="bubblingG_3">
-					</span>
-				</div>
-			<div id="serach_results" class="list-group">
-				<div id="page-1" class="page"></div>
-
-			</div>
-
-			<div class="col-md-6 col-md-offset-4">
-				<nav id="serach-nav">
-				  <ul class="pagination">
-				    <li>
-				      <a href="#" aria-label="Previous">
-				        <span aria-hidden="true">&laquo;</span>
-				      </a>
-				    </li>				  
-				    <li><a data-target="#" class="link_btn">1</a></li>
-				    <li><a data-target="#" class="link_btn">2</a></li>
-				    <li><a data-target="#" class="link_btn">3</a></li>
-				    <li><a data-target="#" class="link_btn">4</a></li>
-				    <li><a data-target="#" class="link_btn">5</a></li>
-				    <li>
-				      <a href="#" aria-label="Next">
-				        <span aria-hidden="true">&raquo;</span>
-				      </a>
-				    </li>
-				  </ul>
-				</nav>
-			</div>
-
-		</div>
+		
 
 	</div>
 

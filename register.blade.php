@@ -40,7 +40,7 @@
 	      <a class="navbar-brand" href="#">
 	        <img id="icon" alt="Brand" src="img/icon.png">
 	      </a>
-	      <a class="navbar-brand" href="#">生產力4.0 知識庫</a>
+	      <a class="navbar-brand" href="#">智慧製造產業創新知識庫</a>
 	    </div>
 
 		<!-- Collect the nav links, forms, and other content for toggling -->
@@ -250,7 +250,7 @@
 		<div class="container">
 			<div class="footer-left">
 
-				<p>指導單位: </p>
+				<p>指導與經費提供單位: </p>
 				<img id="moe" src="img/moe_logo.png">
 
 				
@@ -270,7 +270,7 @@
 				</div>
 			</div>
 
-			<p class="footer-company-name">生產力4.0知識庫平台&copy; 2016</p>
+			<p class="footer-company-name">教育部 智慧製造產業創新人才培育計畫 &copy; 2016</p>
 		</div>
 
 
