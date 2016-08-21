@@ -17,7 +17,7 @@
 				<div class="row">
 					<div id="top-intro" class="col-md-8 col-md-offset-2">
 						<img id="top-logo" src="img/logo.png">
-			            <!--<h1 class="brand-heading">生產力 4.0 知識庫</h1>-->
+			            <h1 class="brand-heading">智慧製造產業創新知識庫</h1>
 			        </div>
 					@include('search_module')
 			  		
@@ -29,7 +29,7 @@
 	<div id="banner" class="container">
 		<div id="statistic" class="cardview">
 			<h4 >
-				<i class="fa fa-bullhorn" aria-hidden="true"></i> 歡迎使用生產力4.0資料庫，目前資料: <?php echo $paperCount?> 筆資料
+				<i class="fa fa-bullhorn" aria-hidden="true"></i> 歡迎使用智慧製造產業創新知識庫，目前資料: <?php echo $paperCount?> 筆資料
 			</h4>
 		</div>
 	</div>

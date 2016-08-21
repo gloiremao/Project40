@@ -2,7 +2,7 @@
 <head>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<title>生產力4.0知識庫</title>
+	<title>智慧製造產業創新知識庫</title>
 	<link rel="icon" href="img/icon.ico">
 	<link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
 	
@@ -37,7 +37,7 @@
 	      <a class="navbar-brand" href="/itri">
 	        <img id="icon" alt="Brand" src="img/icon.png">
 	      </a>
-	      <a class="navbar-brand" href="/itri">生產力4.0 知識庫</a>
+	      <a class="navbar-brand" href="/itri">智慧製造產業創新知識庫</a>
 	    </div>
 
 		<!-- Collect the nav links, forms, and other content for toggling -->
@@ -53,13 +53,13 @@
 		  	<li><a id="hot-btn" href="popular" >熱門文章</a></li>
 		  	<li><a id="data-type-btn" href="datatype" class="link_btn" >資料類型</a></li>
 		  	<li><a id="data-field-btn" href="technology" class="link_btn" >技術領域</a></li>
-		  	<li><a id="discussion-btn" href="404" class="link_btn" >討論區</a></li>
+		  	<li><a id="discussion-btn" href="forum" class="link_btn" >討論區</a></li>
 		  	<li class="dropdown">
 		      <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">下載區<span class="caret"></span></a>
 		      <ul class="dropdown-menu">	
-		        <li><a href="404">聯盟中心教材</a></li>
-		        <li><a href="404">國內廠商資料</a></li>
-		        <li><a href="404">APP下載</a></li>		    
+		        <li><a href="resources">聯盟中心教材</a></li>
+		        <li><a href="resources">國內廠商資料</a></li>
+		        <li><a href="resources">APP下載</a></li>		    
 		      </ul>
 		    </li>
 
@@ -96,7 +96,7 @@
 		<div class="container">
 			<div class="footer-left">
 
-				<p>指導單位: </p>
+				<p>指導與經費提供單位: </p>
 				<img id="moe" src="img/moe_logo.png">
 
 				
@@ -115,7 +115,7 @@
 					<p><i class="fa fa-envelope"></i> <a href="mailto:support@company.com">support@company.com</a></p>
 				</div>
 			</div>
-			<p class="footer-company-name">生產力4.0知識庫&copy; 2016</p>
+			<p class="footer-company-name">教育部 智慧製造產業創新人才培育計畫 &copy; 2016</p>
 
 		</div>
 
