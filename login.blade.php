@@ -65,7 +65,7 @@
 				<div class="org-line"></div>
 				<div id="login-area" class="cardview">
 					<div class="page-header">
-						<h4>生產力4.0知識庫</h4>
+						<h4>智慧製造產業創新知識庫</h4>
 					</div>
 
 
@@ -208,6 +208,18 @@
 
 	<script type="text/javascript" src="js/script.js"></script>
 	<script type="text/javascript" src="js/jquery.easing.min.js"></script>
+
+	<!-- google analytics -->
+	<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+	  ga('create', 'UA-82854773-1', 'auto');
+	  ga('send', 'pageview');
+
+	</script>
 	
 
 </body>

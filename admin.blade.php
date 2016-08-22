@@ -90,7 +90,8 @@
 			                </div>
 			            </li>
 
-			            <li class="side-btn" target="#"><a ><i class="fa fa-bar-chart" aria-hidden="true"></i> 網站報表</a></li>
+			            <li class="side-btn" target="analytics"><a ><i class="fa fa-bar-chart" aria-hidden="true"></i> 網站報表</a></li>
+			            <li ><a href="/itri"><i class="fa fa-home" aria-hidden="true"></i> 回首頁</a></li>
 
 			        </ul>
 			    </div><!-- /.navbar-collapse -->
@@ -235,33 +236,35 @@
 	                <!-- /.row -->
 	                <div class="row">
 	                	<div class="col-lg-6">
-				{!! Form::open(
-				    array(
-				        'url' => 'uploadByExcel',
-				        'files' => true)) !!}
+							{!! Form::open(
+							    array(
+							        'url' => 'uploadByExcel',
+							        'files' => true)) !!}
 
-				<div class="form-group">
-				    {!! Form::label('上傳excel檔案') !!}
-				    {!! Form::file('image', null) !!}
-				</div>
+								<div class="form-group">
+								    {!! Form::label('上傳excel檔案') !!}
+								    {!! Form::file('image', null) !!}
+								</div>
 
-				<div class="form-group">
-				    {!! Form::submit('上傳資料') !!}
-				</div>
-				{!! Form::close() !!}
-				<!--
-                        	<form role="form">
-                        		<div class="form-group">
-	                                <label>上傳excel檔案</label>
-	                                <input type="file">
-	                                
-	                            </div>
-	                            <button type="submit" class="btn btn-default">上傳資料</button>
-                        	</form>
-				-->
+								<div class="form-group">
+								    {!! Form::submit('上傳資料') !!}
+								</div>
+							{!! Form::close() !!}
                         </div>
 	                </div>
            		</div>
+
+           		<div id="analytics" class="side-body-tab cardview" style="display:none">
+           			<div class="page-header">
+					  <h4>Google Analytics 分析報表 <small> 請登入以瀏覽分析報表 </small></h4>
+					</div>
+					<pre> 請使用 itriknowledgebase@gmail.com 登入 </pre>
+           			<section id="auth-button"></section>
+					<section id="view-selector"></section>
+					<section id="timeline"></section>
+           		</div>
+
+
         	</div>
     	</div>
 	</div>
@@ -272,4 +275,64 @@
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
 
 	<script type="text/javascript" src="js/admin.js"></script>
+
+	<script>
+	(function(w,d,s,g,js,fjs){
+	  g=w.gapi||(w.gapi={});g.analytics={q:[],ready:function(cb){this.q.push(cb)}};
+	  js=d.createElement(s);fjs=d.getElementsByTagName(s)[0];
+	  js.src='https://apis.google.com/js/platform.js';
+	  fjs.parentNode.insertBefore(js,fjs);js.onload=function(){g.load('analytics')};
+	}(window,document,'script'));
+	</script>
+
+	<script>
+	gapi.analytics.ready(function() {
+
+	  // Step 3: Authorize the user.
+
+	  var CLIENT_ID = '807712980394-jo9l7nvhpft4th0vma3112camscments.apps.googleusercontent.com';
+
+	  gapi.analytics.auth.authorize({
+	    container: 'auth-button',
+	    clientid: CLIENT_ID,
+	  });
+
+	  // Step 4: Create the view selector.
+
+	  var viewSelector = new gapi.analytics.ViewSelector({
+	    container: 'view-selector'
+	  });
+
+	  // Step 5: Create the timeline chart.
+
+	  var timeline = new gapi.analytics.googleCharts.DataChart({
+	    reportType: 'ga',
+	    query: {
+	      'dimensions': 'ga:date',
+	      'metrics': 'ga:sessions',
+	      'start-date': '30daysAgo',
+	      'end-date': 'yesterday',
+	    },
+	    chart: {
+	      type: 'LINE',
+	      container: 'timeline'
+	    }
+	  });
+
+	  // Step 6: Hook up the components to work together.
+
+	  gapi.analytics.auth.on('success', function(response) {
+	    viewSelector.execute();
+	  });
+
+	  viewSelector.on('change', function(ids) {
+	    var newIds = {
+	      query: {
+	        ids: ids
+	      }
+	    }
+	    timeline.set(newIds).execute();
+	  });
+	});
+	</script>
 </body>

@@ -48,8 +48,8 @@ header {
 }
 
 #top-logo {
-	visibility: hidden;
-	height: 200px;
+	/*visibility: hidden;*/
+	height: 250px;
 }
 
 .navbar {
