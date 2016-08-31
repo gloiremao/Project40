@@ -17,19 +17,19 @@
 
 			<div id="asking-area" class="row cardview">
 				<div class=" col-md-12 form-group">
-					<h4><i class="fa fa-commenting-o" aria-hidden="true"></i> 發表問題</h4>
-	                <p class="help-block">您的問題將會交由客服人員回覆，並且顯示在此。</p>
-	                <label class="control-label">主旨</label>
-	                <input class="form-control" placeholder="請填入您的問題主旨">
-	                <label class="control-label">內文</label>
-	               	<textarea id="input-comment"class="form-control" rows="3" placeholder="內文"></textarea>
-					<button id="btn-submit" class="btn btn-success" type="submit">發表</button>
+					<h4><i class="fa fa-commenting-o" aria-hidden="true"></i> {{ trans('string.post_question')}}</h4>
+	                <p class="help-block">{{ trans('string.post_help')}}</p>
+	                <label class="control-label">{{ trans('string.post_title')}}</label>
+	                <input class="form-control" placeholder="{{ trans('string.post_title_help')}}">
+	                <label class="control-label">{{ trans('string.post_content')}}</label>
+	               	<textarea id="input-comment"class="form-control" rows="3" placeholder="{{ trans('string.post_content')}}"></textarea>
+					<button id="btn-submit" class="btn btn-success" type="submit">{{ trans('string.post_btn')}}</button>
 	            </div>
 	        </div>
 
 	        <div id="asking-area" class="row cardview">
 	        	<div class="page-header">
-				  	<h4 class="section-title"><i class="fa fa-question" aria-hidden="true"></i> 問題集錦</h4>
+				  	<h4 class="section-title"><i class="fa fa-question" aria-hidden="true"></i> {{ trans('string.question_title')}}</h4>
 				</div>
 				<div class="col-md-12 list-group">
 					<div class="col-md-12 qa-title">

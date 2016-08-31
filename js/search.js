@@ -109,7 +109,7 @@ function search(keywords){
 	var req_years = requestToString(years);
 	
 	//search query
-	$("#show_serach_keywords").html("搜尋結果: "+keywords);
+	$("#show_serach_keywords").html(string_search_result+""+keywords);
 	$("#loading").show();
 
 	$.get("search/query", 
@@ -132,7 +132,7 @@ function searchResultsHandler(response){
 
 	$("#loading").hide();
  	var papers = JSON.parse(''+response);
- 	$("#show_serach_keywords").append(", 共 " + papers.length + " 筆資料");
+ 	$("#show_serach_keywords").append(string_search_count+ " " + papers.length);
  	if(papers.length > 10){
 
  		$("#serach-nav").append('<li id="prev" data-target="#" class="disabled" ><a id="page-prev" data-target="#" class="nav-iter" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a></li>');

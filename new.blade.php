@@ -30,14 +30,14 @@
 			
 			<div id="new-tab" class="cardview info-tab">
 				<div class="page-header">
-				  	<h4 class="section-title"><i class="fa fa-bolt" aria-hidden="true"></i> 最新文章</h4>
+				  	<h4 class="section-title"><i class="fa fa-bolt" aria-hidden="true"></i> {{ trans('string.new')}}</h4>
 				</div>
 				<div class="list-group">
 				  <?php 
 							foreach ($papers as $paper) {
 								echo "<a data-target='{$paper->id}' target='_blank' href='view?id={$paper->id}' class='list-group-item'>
 									    <h4 class='list-group-item-heading'>{$paper->title}</h4>
-									    <p class='list-group-item-text'>{$paper->authors}</p>
+									    <p class='list-group-item-text authors-list'>{$paper->authors}</p>
 									  </a>";
 							}
 							

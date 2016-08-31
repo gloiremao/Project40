@@ -15,8 +15,8 @@
 	<header>
 		<div class="container">
 			<div class="page-header">
-			  	<h3>網頁建置中</h3>   		
-			  	<p>Sorry! 網頁建置中，按此<a href="/itri">回首頁</a></p>
+			  	<h3>{{ trans('string.warning404')}}</h3>   		
+			  	<p>{{ trans('string.warning_info')}}<a href="/itri">{{ trans('string.home')}}</a></p>
 			</div>
 			<div id="logo404" class="cardview">
 				

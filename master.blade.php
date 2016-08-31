@@ -2,7 +2,7 @@
 <head>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<title>智慧製造產業創新知識庫</title>
+	<title>{{ trans('string.title') }}</title>
 	<link rel="icon" href="img/icon.ico">
 	<link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
 	
@@ -37,7 +37,7 @@
 	      <a class="navbar-brand" href="/itri">
 	        <img id="icon" alt="Brand" src="img/icon.png">
 	      </a>
-	      <a class="navbar-brand" href="/itri">智慧製造產業創新知識庫</a>
+	      <a class="navbar-brand" href="/itri">{{ trans('string.title') }}</a>
 	    </div>
 
 		<!-- Collect the nav links, forms, and other content for toggling -->
@@ -49,33 +49,33 @@
 		  <ul class="nav navbar-nav navbar-right">
 		  	
 		  	
-		  	<li><a id="new-btn" href="new" >最新文章</a></li>
-		  	<li><a id="hot-btn" href="popular" >熱門文章</a></li>
-		  	<li><a id="data-type-btn" href="datatype" class="link_btn" >資料類型</a></li>
-		  	<li><a id="data-field-btn" href="technology" class="link_btn" >技術領域</a></li>
-		  	<li><a id="discussion-btn" href="forum" class="link_btn" >討論區</a></li>
+		  	<li><a id="new-btn" href="new" >{{ trans('string.new') }}</a></li>
+		  	<li><a id="hot-btn" href="popular" >{{ trans('string.popular') }}</a></li>
+		  	<li><a id="data-type-btn" href="datatype" class="link_btn" >{{ trans('string.datatype') }}</a></li>
+		  	<li><a id="data-field-btn" href="technology" class="link_btn" >{{ trans('string.techtype') }}</a></li>
+		  	<li><a id="discussion-btn" href="forum" class="link_btn" >{{ trans('string.forum') }}</a></li>
 		  	<li class="dropdown">
-		      <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">下載區<span class="caret"></span></a>
+		      <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">{{ trans('string.download') }}<span class="caret"></span></a>
 		      <ul class="dropdown-menu">	
-		        <li><a href="resources">聯盟中心教材</a></li>
-		        <li><a href="resources">國內廠商資料</a></li>
-		        <li><a href="resources">APP下載</a></li>		    
+		        <li><a href="resources#tab1">{{ trans('string.download-alliance') }}</a></li>
+		        <li><a href="resources#tab2">{{ trans('string.download-industry') }}</a></li>
+		        <li><a href="resources#tab3">{{ trans('string.download-app') }}</a></li>		    
 		      </ul>
 		    </li>
 
-		    <li><a href=""><i class="fa fa-globe" aria-hidden="true"></i> English</a></li>
+		    <li><a href="{{ trans('string.lang-href') }}"><i class="fa fa-globe" aria-hidden="true"></i>{{ trans('string.lang') }}</a></li>
 		    <li class="dropdown">
-		      <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">使用者, 您好<span class="caret"></span></a>
+		      <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">{{ trans('string.greeting', ['name' => '使用者']) }}<span class="caret"></span></a>
 		      <ul class="dropdown-menu">
-		      	<li><a href="admin" class="link_btn" >管理面板(管理員)</a></li>
-		      	<li><a class="link_btn" >上傳文件</a></li>
-		        <li><a href="#">我的收藏庫</a></li>
-		        <li><a href="#">我的文章</a></li>
+		      	<li><a href="admin" class="link_btn" >{{ trans('string.admin') }}</a></li>
+		      	<li><a href="account#upload" class="link_btn" >{{ trans('string.upload') }}</a></li>
+		        <li><a id="favorite-btn" href="account#favorite">{{ trans('string.myfavorite') }}</a></li>
+		        <li><a id="myupload-btn" href="account#mypaper">{{ trans('string.myuploaded') }}</a></li>
 		        <li role="separator" class="divider"></li>
-		        <li><a href="#">使用說明</a></li>
-		        <li><a href="#">聯絡我們</a></li>
-		        <li><a href="account">帳戶管理</a></li>
-		        <li><a href="logout">登出</a></li>
+		        <!--<li><a href="#">{{ trans('string.help') }}</a></li>
+		        <li><a href="#">{{ trans('string.contactus') }}</a></li>-->
+		        <li><a href="account">{{ trans('string.account') }}</a></li>
+		        <li><a href="logout">{{ trans('string.logout') }}</a></li>
 		      </ul>
 		    </li>
 		  </ul>
@@ -96,7 +96,7 @@
 		<div class="container">
 			<div class="footer-left">
 
-				<p>指導與經費提供單位: </p>
+				<p>{{ trans('string.sponsor') }}</p>
 				<img id="moe" src="img/moe_logo.png">
 
 				
@@ -106,16 +106,16 @@
 
 			<div class="footer-right">
 				<div>
-					<p><i class="fa fa-map-marker"></i> <span>地址</span> 地址資訊</p>
+					<p><i class="fa fa-map-marker"></i> {{ trans('string.address') }}</p>
 				</div>
 				<div>
-					<p><i class="fa fa-phone"></i> 連絡電話資訊</p>
+					<p><i class="fa fa-phone"></i> {{ trans('string.footer-phone')}}</p>
 				</div>
 				<div>
 					<p><i class="fa fa-envelope"></i> <a href="mailto:support@company.com">support@company.com</a></p>
 				</div>
 			</div>
-			<p class="footer-company-name">教育部 智慧製造產業創新人才培育計畫 &copy; 2016</p>
+			<p class="footer-company-name">{{ trans('string.footer-title') }}</p>
 
 		</div>
 

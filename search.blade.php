@@ -6,6 +6,10 @@
 
 @section('include-js')
 	<script type="text/javascript" src="js/search.js"></script>
+	<script type="text/javascript">
+		var string_search_result = "{{ trans('string.search_results')}}";
+		var string_search_count = "{{ trans('string.search_count')}}";
+	</script>
 @stop
 
 

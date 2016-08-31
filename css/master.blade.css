@@ -142,6 +142,10 @@ nav li{
 		-moz-animation-delay: 0.9s;
 }
 
+.authors-list {
+	color: green;
+}
+
 
 
 @keyframes bubblingG {
@@ -264,5 +268,25 @@ nav li{
     }
     .collapsing {
         overflow: hidden!important;
+    }
+    
+}
+
+@media (max-width: 450px) {
+   
+    a.navbar-brand {
+    	font-size: 18px;
+    	padding-left: 5px;
+    	padding-right: 5px;
+    }
+}
+
+
+@media (max-width: 320px) {
+   
+    a.navbar-brand {
+    	font-size: 16px;
+    	padding-left: 5px;
+    	padding-right: 1px;
     }
 }

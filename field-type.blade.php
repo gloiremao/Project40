@@ -27,7 +27,7 @@
 	    
 	    <div class="container">
 	    	<div class="page-header">
-			  	<h4 class="section-title"><i class="fa fa-file" aria-hidden="true"></i> 技術領域</h4>
+			  	<h4 class="section-title"><i class="fa fa-file" aria-hidden="true"></i> {{ trans("string.techtype")}}</h4>
 			</div>
 
 	    	<ul id="data-nav" class="nav nav-tabs">

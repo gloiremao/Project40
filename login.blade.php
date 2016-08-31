@@ -2,7 +2,7 @@
 <head>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<title>智慧製造產業創新知識庫</title>
+	<title>{{ trans('string.title')}}</title>
 	
 	<link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
 	
@@ -38,7 +38,7 @@
 	      <a class="navbar-brand" href="#">
 	        <img id="icon" alt="Brand" src="img/icon.png">
 	      </a>
-	      <a class="navbar-brand" href="#">智慧製造產業創新知識庫</a>
+	      <a class="navbar-brand" href="#">{{ trans('string.title')}}</a>
 	    </div>
 
 		<!-- Collect the nav links, forms, and other content for toggling -->
@@ -49,8 +49,9 @@
 		  
 		  <ul class="nav navbar-nav navbar-right">
 		  	
+		  	<li><a href="{{ trans('string.lang-href') }}"><i class="fa fa-globe" aria-hidden="true"></i>{{ trans('string.lang') }}</a></li>
 		  	<li>
-		  		<a href="register" role="button">註冊</a>
+		  		<a href="register" role="button">{{ trans('string.register')}}</a>
 		  	</li>
 
 		  </ul>
@@ -65,7 +66,7 @@
 				<div class="org-line"></div>
 				<div id="login-area" class="cardview">
 					<div class="page-header">
-						<h4>智慧製造產業創新知識庫</h4>
+						<h4>{{ trans('string.login')}}</h4>
 					</div>
 
 
@@ -73,7 +74,7 @@
                         {{ csrf_field() }}
 
                         <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
-                            <label for="email" class="col-md-4 control-label">電子郵件</label>
+                            <label for="email" class="col-md-4 control-label">{{ trans('string.email')}}</label>
 
                             <div class="col-md-6">
                                 <input id="email" placeholder="email" type="email" class="form-control" name="email" value="{{ old('email') }}">
@@ -87,10 +88,10 @@
                         </div>
 
                         <div class="form-group{{ $errors->has('password') ? ' has-error' : '' }}">
-                            <label for="password" class="col-md-4 control-label">密碼</label>
+                            <label for="password" class="col-md-4 control-label">{{ trans('string.password')}}</label>
 
                             <div class="col-md-6">
-                                <input id="password" placeholder="密碼" type="password" class="form-control" name="password">
+                                <input id="password" placeholder="{{ trans('string.password')}}" type="password" class="form-control" name="password">
 
                                 @if ($errors->has('password'))
                                     <span class="help-block">
@@ -104,7 +105,7 @@
                             <div class="col-md-6 col-md-offset-4">
                                 <div class="checkbox">
                                     <label>
-                                        <input type="checkbox" name="remember"> 保持登入
+                                        <input type="checkbox" name="remember"> {{ trans('string.keep-alive')}}
                                     </label>
                                 </div>
                             </div>
@@ -112,10 +113,10 @@
 
                         <div class="form-group">
                             <div class="col-md-6 col-md-offset-4">
-                                <button type="submit" class="btn btn-primary">登入
+                                <button type="submit" class="btn btn-primary">{{ trans('string.login')}}
                                 </button>
 
-                                <a class="btn btn-link" href="{{ url('/password/reset') }}">忘記密碼?</a>
+                                <a class="btn btn-link" href="{{ url('/password/reset') }}">{{ trans('string.forgot-password')}}</a>
                             </div>
                         </div>
                     </form>
@@ -130,8 +131,7 @@
 
 	<div id="banner" class="container">
 		<div id="statistic" class="cardview">
-			<h4 ><i class="fa fa-bullhorn" aria-hidden="true"></i> 歡迎使用智慧製造產業創新知識庫
-，目前資料: <?php echo $paperCount?> 筆資料</h4>
+			<h4 ><i class="fa fa-bullhorn" aria-hidden="true"></i> {{ trans('string.welcome-msg', ['count' => $paperCount]) }}</h4>
 		</div>
 	</div>
 	
@@ -144,7 +144,7 @@
 
 			<div id="new-paper" class="cardview">
 				<div class="page-header">
-				  	<h4 class="section-title"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i> 推薦閱讀</h4>
+				  	<h4 class="section-title"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i> {{ trans("string.recommend")}}</h4>
 				</div>
 				<div class="list-group">
 				  	<?php 
@@ -175,7 +175,7 @@
 		<div class="container">
 			<div class="footer-left">
 
-				<p>指導與經費提供單位: </p>
+				<p>{{ trans('string.sponsor')}} </p>
 				<img id="moe" src="img/moe_logo.png">
 
 				
@@ -185,17 +185,17 @@
 
 			<div class="footer-right">
 				<div>
-					<p><i class="fa fa-map-marker"></i> <span>地址</span> 地址資訊</p>
+					<p><i class="fa fa-map-marker"></i> {{ trans('string.address')}}</p>
 				</div>
 				<div>
-					<p><i class="fa fa-phone"></i> 連絡電話資訊</p>
+					<p><i class="fa fa-phone"></i> {{ trans('string.footer-phone')}}</p>
 				</div>
 				<div>
 					<p><i class="fa fa-envelope"></i> <a href="mailto:support@company.com">support@company.com</a></p>
 				</div>
 			</div>
 
-			<p class="footer-company-name">教育部 智慧製造產業創新人才培育計畫 &copy; 2016</p>
+			<p class="footer-company-name">{{ trans('string.welcome-msg')}}</p>
 		</div>
 
 

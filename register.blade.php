@@ -2,7 +2,7 @@
 <head>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<title>註冊會員</title>
+	<title>{{ trans('string.register_title')}}</title>
 	
 	<link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
 	
@@ -40,7 +40,7 @@
 	      <a class="navbar-brand" href="#">
 	        <img id="icon" alt="Brand" src="img/icon.png">
 	      </a>
-	      <a class="navbar-brand" href="#">智慧製造產業創新知識庫</a>
+	      <a class="navbar-brand" href="#">{{ trans('string.title')}}</a>
 	    </div>
 
 		<!-- Collect the nav links, forms, and other content for toggling -->
@@ -50,7 +50,8 @@
 		  </ul>
 		  
 		  <ul class="nav navbar-nav navbar-right">
-		  		<li><a href="login">已經有帳號? 立即登入</a></li>
+                <li><a href="{{ trans('string.lang-href') }}"><i class="fa fa-globe" aria-hidden="true"></i>{{ trans('string.lang') }}</a></li>
+		  		<li><a href="login">{{ trans('string.login_help')}}</a></li>
 		  </ul>
 		</div><!-- /.navbar-collapse -->
 
@@ -79,7 +80,7 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <h4 class="page-header">
-                            註冊
+                            {{ trans('string.register_title')}}
                         </h4>
                     </div>
                 </div>
@@ -91,26 +92,26 @@
                             {{ csrf_field() }}
 
                             <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
-                                <label for="email" class="col-md-4 control-label">電子郵件</label>
+                                <label for="email" class="col-md-4 control-label">{{ trans('string.email')}}</label>
 
                                 <div class="col-md-6">
-                                    <input id="email" type="email" placeholder="你的通訊用電子郵件" class="form-control" name="email" value="{{ old('email') }}">
+                                    <input id="email" type="email" placeholder="{{ trans('string.email_holder')}}" class="form-control" name="email" value="{{ old('email') }}">
 
                                     @if ($errors->has('email'))
                                         <span class="help-block">
                                             <strong>{{ $errors->first('email') }}</strong>
                                         </span>
                                     @endif
-                                    <p class="help-block">此郵件將會是您登入網頁的帳號</p>
+                                    <p class="help-block">{{ trans('string.email_help')}}</p>
                                 </div>
                                
                             </div>
 
                             <div class="form-group{{ $errors->has('password') ? ' has-error' : '' }}">
-                                <label for="password" class="col-md-4 control-label">密碼</label>
+                                <label for="password" class="col-md-4 control-label">{{ trans('string.password')}}</label>
 
                                 <div class="col-md-6">
-                                    <input id="password" type="password" placeholder="請填入6位數以上之密碼" class="form-control" name="password">
+                                    <input id="password" type="password" placeholder="{{ trans('string.password_holder')}}" class="form-control" name="password">
 
                                     @if ($errors->has('password'))
                                         <span class="help-block">
@@ -121,10 +122,10 @@
                             </div>
 
                             <div class="form-group{{ $errors->has('password_confirmation') ? ' has-error' : '' }}">
-                                <label for="password-confirm" class="col-md-4 control-label">確認密碼</label>
+                                <label for="password-confirm" class="col-md-4 control-label">{{ trans('string.confirmed_password')}}</label>
 
                                 <div class="col-md-6">
-                                    <input id="password-confirm"  placeholder="請確認您輸入的密碼" type="password" class="form-control" name="password_confirmation">
+                                    <input id="password-confirm"  placeholder="{{ trans('string.confirmed_password')}}" type="password" class="form-control" name="password_confirmation">
 
                                     @if ($errors->has('password_confirmation'))
                                         <span class="help-block">
@@ -135,43 +136,43 @@
                             </div>
 
                             <div class="form-group">
-                                <label class="col-md-4 control-label" >身分別</label>
+                                <label class="col-md-4 control-label" > {{ trans('string.identity')}}</label>
                                 <div class="col-md-6">
                                     <div class="radio">
                                         <label>
-                                            <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>學生
+                                            <input type="radio" name="optionsRadios" id="optionsRadios1" value="student" checked>{{ trans('string.student')}}
                                         </label>
                                     </div>
                                     <div class="radio">
                                         <label>
-                                            <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">教師
+                                            <input type="radio" name="optionsRadios" id="optionsRadios2" value="teacher">{{ trans('string.teacher')}}
                                         </label>
                                     </div>
                                     <div class="radio">
                                         <label>
-                                            <input type="radio" name="optionsRadios" id="optionsRadios3" value="option3">工程師
+                                            <input type="radio" name="optionsRadios" id="optionsRadios3" value="engineer">{{ trans('string.engineer')}}
                                         </label>
                                     </div>
                                     <div class="radio">
                                         <label>
-                                            <input type="radio" name="optionsRadios" id="optionsRadios3" value="option3">其他
+                                            <input type="radio" name="optionsRadios" id="optionsRadios3" value="others">{{ trans('string.others')}}
                                         </label>
                                     </div>
                                 </div>
                             </div>
 
                             <div class="form-group{{ $errors->has('name') ? ' has-error' : '' }}">
-                                <label for="name" class="col-md-4 control-label">姓名</label>
+                                <label for="name" class="col-md-4 control-label">{{ trans('string.myname')}}</label>
 
                                 <div class="col-md-6">
-                                    <input id="name" placeholder="請填您的真實姓名" type="text" class="form-control" name="name" value="{{ old('name') }}">
+                                    <input id="name" placeholder="{{ trans('string.name_holder')}}" type="text" class="form-control" name="name" value="{{ old('name') }}">
 
                                     @if ($errors->has('name'))
                                         <span class="help-block">
                                             <strong>{{ $errors->first('name') }}</strong>
                                         </span>
                                     @endif
-                                    <p class="help-block">請填您的真實姓名，以利審核員查證</p>
+                                    <p class="help-block">{{ trans('string.name_help')}}</p>
                                 </div>
                                 
                             </div>
@@ -179,52 +180,48 @@
                             
 
                             <div class="form-group">
-                                <label class="col-md-4 control-label">學校(單位)</label>
+                                <label class="col-md-4 control-label">{{ trans('string.company')}}</label>
                                 <div class="col-md-6">
-                                    <input class="form-control" placeholder="請填入您的單位">
+                                    <input class="form-control" placeholder="{{ trans('string.company_holder')}}">
                                 </div>
-                                <label class="col-md-4 control-label">科系(部門)</label>
+                                <label class="col-md-4 control-label">{{ trans('string.department')}}</label>
                                 <div class="col-md-6">
-                                    <input class="form-control" placeholder="請填入此資料發佈出處">
-                                </div>
-                            </div>
-
-                            <div class="form-group">
-                                <label class="col-md-4 control-label">學號(員工編號)</label>
-                                <div class="col-md-6">
-                                    <input class="form-control" placeholder="請填入學號或員工編號">
+                                    <input class="form-control" placeholder="{{ trans('string.department-holder')}}">
                                 </div>
                             </div>
 
                             <div class="form-group">
-                                <label class="col-md-4 control-label">電話</label>
+                                <label class="col-md-4 control-label">{{ trans('string.id')}}</label>
                                 <div class="col-md-6">
-                                    <input class="form-control" placeholder="請填入您工作單位電話">
-                                </div>
-                                <label class="col-md-4 control-label">行動電話</label>
-                                <div class="col-md-6">
-                                    <input class="form-control" placeholder="請填入您聯繫之行動電話">
+                                    <input class="form-control" placeholder="{{ trans('string.id_holder')}}">
                                 </div>
                             </div>
 
                             <div class="form-group">
-                                <label class="col-md-4 control-label">隱私條款</label>
+                                <label class="col-md-4 control-label">{{ trans('string.cellphone')}}</label>
                                 <div class="col-md-6">
-                                <p id="privacy-rule" class="form-control" rows="3" >隱私條款
+                                    <input class="form-control" placeholder="{{ trans('string.cellphone_holder')}}">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="col-md-4 control-label">{{ trans('string.privacy')}}</label>
+                                <div class="col-md-6">
+                                <p id="privacy-rule" class="form-control" rows="3" >{{ trans('string.privacy_content')}}
 								</p>
 
 								<div class="radio">
                                     <label>
-                                        <input type="radio" name="optionsRadios" id="optionsRadios1" value="yes" >同意
+                                        <input type="radio" name="optionsRadios" id="optionsRadios1" value="yes" >{{ trans('string.confirm')}}
                                     </label>
                                 </div>
                                 </div>
                             </div>
 
                             <div class="form-group">
-                                <label class="col-md-4 control-label">請確認以上資訊是否正確</label>
+                                <label class="col-md-4 control-label">{{ trans('string.register_help')}}</label>
                                 <div class="col-md-6">
-                                    <button type="submit" class="btn btn-success">送出</button>
+                                    <button type="submit" class="btn btn-success">{{ trans('string.submit-btn')}}</button>
                                 </div>
                             </div>
                             
@@ -250,7 +247,7 @@
 		<div class="container">
 			<div class="footer-left">
 
-				<p>指導與經費提供單位: </p>
+				<p>{{ trans('string.sponsor')}} </p>
 				<img id="moe" src="img/moe_logo.png">
 
 				
@@ -260,17 +257,17 @@
 
 			<div class="footer-right">
 				<div>
-					<p><i class="fa fa-map-marker"></i> <span>地址</span> 地址資訊</p>
+					<p><i class="fa fa-map-marker"></i> {{ trans('string.address')}}</p>
 				</div>
 				<div>
-					<p><i class="fa fa-phone"></i> 連絡電話資訊</p>
+					<p><i class="fa fa-phone"></i> {{ trans('string.footer-phone')}}</p>
 				</div>
 				<div>
 					<p><i class="fa fa-envelope"></i> <a href="mailto:support@company.com">support@company.com</a></p>
 				</div>
 			</div>
 
-			<p class="footer-company-name">教育部 智慧製造產業創新人才培育計畫 &copy; 2016</p>
+			<p class="footer-company-name">{{ trans('string.address')}}</p>
 		</div>
 
 

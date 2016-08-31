@@ -9,9 +9,9 @@
 	<form action="search" onsubmit="return validateForm()">
 		<div class="input-group input-group-lg">
 			<span class="input-group-btn">
-		        <button id="smart-btn" class="btn btn-primary" type="button">進階搜尋</button>
+		        <button id="smart-btn" class="btn btn-primary" type="button">{{ trans('string.advanced_search') }}</button>
 		    </span>
-				<input id="input-search" type="text" name="query" class="form-control" placeholder="全站搜尋..." onkeypress="return onEnterPress(event)">
+				<input id="input-search" type="text" name="query" class="form-control" placeholder="{{ trans('string.search_holder')}}" onkeypress="return onEnterPress(event)">
 				<span class="input-group-btn">
 				<button id="search_btn" class="btn btn-default" type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
 				</span>
@@ -88,8 +88,7 @@
 				    <option >2013</option>
 				    <option >2012</option>
 				    <option >2011</option>
-				    <option >2005年以後</option>
-				    <option >2000年以後</option>
+				    <option >2010年以前</option>
 				</select>
 			</div>
 	  		

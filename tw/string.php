@@ -1,0 +1,117 @@
+<?php
+
+return [
+
+    /*
+    |--------------------------------------------------------------------------
+    | Authentication Language Lines
+    |--------------------------------------------------------------------------
+    |
+    | The following language lines are used during authentication for various
+    | messages that we need to display to the user. You are free to modify
+    | these language lines according to your application's requirements.
+    |
+    */
+
+    'title' => '智慧製造產業創新知識庫',
+    'welcome-msg' => '歡迎使用智慧製造產業創新知識庫，目前資料：:count 筆資料',
+    'new' => '最新文章',
+    'popular' => '熱門文章',
+    'hot_author' => '熱門作者',
+    'datatype' => '資料類型',
+    'techtype' => '技術領域',
+    'forum' => '論壇',
+    'download' => '下載區',
+    'download-alliance' => '聯盟中心教材',
+    'download-industry' => '國內廠商資料',
+    'download-app' => 'APP下載',
+    'greeting' => ':name,您好!',
+    'lang' => 'English',
+    'lang-href' => 'lang/en',
+    'admin' => '管理面板',
+    'upload' => '上傳文件',
+    'myfavorite' => '我的收藏庫',
+    'myuploaded' => '我的文章',
+    'help' => '使用說明',
+    'contactus' => '聯絡我們',
+    'account' => '帳戶管理',
+    'logout' => '登出',
+    'footer-title' => '教育部 智慧製造產業創新人才培育計畫 &copy; 2016',
+    'footer-phone' => '連絡電話',
+    'sponsor' => '指導與經費提供單位',
+    'address' => '地址資訊',
+    'advanced_search' => '進階搜尋',
+    'search_holder' => '全站搜尋...',
+    'post_question' => '發表問題',
+    'post_help' => '您的問題將會交由客服人員回覆，並且顯示在此。',
+    'post_title' => '主旨',
+    'post_title_help' => '請填入您的問題主旨',
+    'post_content' => '內文',
+    'post_btn' => '發表',
+    'question_title' => '問題集錦',
+    'register_title' => '註冊會員',
+    'register' => '註冊',
+    'login' => '登入',
+    'login_help' => '已經有帳號? 立即登入',
+    'email' => '電子郵件',
+    'email_holder' => '你的通訊用電子郵件',
+    'email_help' => '此郵件將會是您登入網頁的帳號',
+    'password' => '密碼',
+    'password_holder' => '請填入6位數以上之密碼',
+    'confirmed_password' => '確認密碼',
+    'identity' => '身分別',
+    'student' => '學生',
+    'teacher' => '教師',
+    'engineer' => '工程師',
+    'others' => '其他',
+    'myname' => '姓名',
+    'name_holder' => '請填您的真實姓名',
+    'name_help' => '請填您的真實姓名，以利審核員查證',
+    'company' => '單位(學校)',
+    'company_holder' => '請填入您的單位',
+    'department' => '部門(科系)',
+    'department-holder' => '請填入部門',
+    'id' => '員工編號(學號)',
+    'id_holder' => '請填入編號',
+    'cellphone' => '行動電話',
+    'cellphone_holder' => '行動電話',
+    'privacy' => '隱私條款',
+    'privacy_content' => '隱私條款內容',
+    'confirm' => '同意',
+    'register_help' => '請確認以上資訊是否正確',
+    'submit-btn' => '送出',
+    'keep-alive' => '保持登入',
+    'forgot-password' => '忘記密碼?',
+    'recommend' => '推薦閱讀',
+    'warning404' => '找不到網頁',
+    'warning_info' => '抱歉! 網頁建置中，按此',
+    'home' => '回首頁',
+    'modify' => '修改資料',
+    'profile' => '個人檔案',
+    'modify_pwd' => '修改密碼',
+    'origin_pwd' => '原始密碼',
+    'origin_pwd_holder' => '請填入原始密碼',
+    'new_pwd' => '新密碼',
+    'author-info' => '目前沒有此作者的作品',
+    'search_results' => '搜尋結果從',
+    'search_count' => ',資料筆數：',
+    'keyword' => '關鍵字',
+    'abstract' => '摘要',
+    'link' => '連結網址',
+    'author' => '作者',
+    'country' => '國家',
+    'published_date' => '發佈日期',
+    'from' => '出處',
+    'unit' => '單位',
+    'level' => '等級',
+    'comment_title' => '評論與問題回報',
+    'comment-content' => '發表評論或問題回報',
+    'favorite' => '收藏',
+    'views' => '瀏覽次數',
+
+ 
+
+
+
+
+];

@@ -28,7 +28,7 @@
 	    
 	    <div class="container">
 	    	<div class="page-header">
-			  	<h4 class="section-title"><i class="fa fa-file" aria-hidden="true"></i> 資料類型</h4>
+			  	<h4 class="section-title"><i class="fa fa-file" aria-hidden="true"></i> {{ trans("string.datatype")}}</h4>
 			</div>
 
 	    	<ul id="data-nav" class="nav nav-tabs">

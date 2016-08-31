@@ -15,7 +15,7 @@
 	<div id="paper" <?php echo 'data-target="{$paper->id}"' ?> class="container cardview">
 		<div class="page-header col-md-11">
 		  	<h3 class="paper-title"><a <?php echo "href='{$paper->link}'" ?> ><i class="fa fa-file-text-o" aria-hidden="true"></i> <?php echo $paper->title ?></a></h3>
-		  	<p>關鍵字: 
+		  	<p>{{ trans('string.keyword')}}: 
 		  		<?php 
 		  			$keywords_arr = explode(",", $paper->keywords);
 		  			foreach ($keywords_arr as $i => $keyword) {
@@ -26,40 +26,40 @@
 		  	</p>
 		</div>
 		<div id="like" class="col-md-1">
-		  	<button type="button" class="btn btn-danger"><i class="fa fa-heart" aria-hidden="true"></i> 收藏</button>
+		  	<button type="button" class="btn btn-danger"><i class="fa fa-heart" aria-hidden="true"></i> {{ trans('string.favorite')}}</button>
 		</div>
 		<div class="paper-info">
 			<table class="paper-table">
 			  <tr>
-			    <td class="table-title">摘要</td>
+			    <td class="table-title">{{ trans('string.abstract')}}</td>
 			    <td class="table-info"><p><?php echo $paper->abstract ?></p></td>
 			  </tr>
 			  <tr>
-			    <td class="table-title">連結網址</td>
+			    <td class="table-title">{{ trans('string.link')}}</td>
 			    <td class="table-info"><?php echo "<a href='{$paper->link}'>{$paper->link}</a>" ?></td>
 			  </tr>
 			  <tr>
-			    <td class="table-title">作者</td>
+			    <td class="table-title">{{ trans('string.author')}}</td>
 			    <td class="table-info"><?php echo $paper->authors ?></td>
 			  </tr>
 			  <tr>
-			    <td class="table-title">國家</td>
+			    <td class="table-title">{{ trans('string.country')}}</td>
 			    <td class="table-info"><?php echo $paper->country ?></td>
 			  </tr>
 			  <tr>
-			    <td class="table-title">發佈日期</td>
+			    <td class="table-title">{{ trans('string.published_date')}}</td>
 			    <td class="table-info"><?php echo $paper->year ?></td>
 			  </tr>
 			  <tr>
-			    <td class="table-title">出處 </td>
+			    <td class="table-title">{{ trans('string.from')}}</td>
 			    <td class="table-info"><?php echo $paper->source ?></td>
 			  </tr>
 			  <tr>
-			    <td class="table-title">單位</td>
+			    <td class="table-title">{{ trans('string.unit')}}</td>
 			    <td class="table-info"><?php echo $paper->office ?></td>
 			  </tr>
 			  <tr>
-			    <td class="table-title">關鍵字</td>
+			    <td class="table-title">{{ trans('string.keyword')}}</td>
 			    <td class="table-info">
 				    <?php 
 			  			$keywords_arr = explode(",", $paper->keywords);
@@ -71,7 +71,7 @@
 			    </td>
 			  </tr>
 			  <tr>
-			    <td class="table-title">等級</td>
+			    <td class="table-title">{{ trans('string.level')}}</td>
 			    <td class="table-info"><?php echo $paper->level ?></td>
 			  </tr>
 			  <tr>
@@ -86,14 +86,18 @@
 			    <td class="table-title">Horizontal Layers</td>
 			    <td class="table-info"><?php echo $paper->HL ?></td>
 			  </tr>
+			  <tr>
+			    <td class="table-title">{{ trans('string.views')}}</td>
+			    <td class="table-info"><?php echo $paper->count ?></td>
+			  </tr>
 			</table>
 		</div>
 
 		<div class="page-header">
-		  	<h4><i class="fa fa-comments-o" aria-hidden="true"></i> 評論與問題回報</h4>
+		  	<h4><i class="fa fa-comments-o" aria-hidden="true"></i> {{ trans('string.comment_title')}}</h4>
 		</div>
-		<textarea id="input-comment"class="form-control" rows="3" placeholder="發表評論或問題回報"></textarea>
-		<button id="btn-commit" class="btn btn-default" type="submit">送出</button>
+		<textarea id="input-comment"class="form-control" rows="3" placeholder="{{ trans('string.comment_content')}}"></textarea>
+		<button id="btn-commit" class="btn btn-default" type="submit">{{ trans('string.submit-btn')}}</button>
 
 	</div>
 

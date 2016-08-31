@@ -5,6 +5,20 @@
 @stop
 
 @section('include-js')
+	<script type="text/javascript">
+		var tabTag = location.hash;
+
+		$(document).ready(function(){
+			
+			if (tabTag == "#tab1" || tabTag == "#tab2" || tabTag == "#tab3"){
+				$(".tab-pane").removeClass("active");
+				$(".nav-tabs li").removeClass("active");
+				$(tabTag).addClass("active");
+				$(tabTag+"-nav").addClass("active");
+			}
+
+		});
+	</script>
 @stop
 
 
@@ -23,9 +37,9 @@
 				<div id="sidemenu" class="col-md-2">
 					<!-- Nav tabs -->
 					<ul class="nav nav-tabs" role="tablist">
-						<li role="presentation" class="active"><a href="#tab1" aria-controls="tab1" role="tab" data-toggle="tab">聯盟中心教材</a></li>
-						<li role="presentation"><a href="#tab2" aria-controls="tab2" role="tab" data-toggle="tab">國內廠商資料</a></li>
-						<li role="presentation"><a href="#tab3" aria-controls="tab3" role="tab" data-toggle="tab">APP下載</a></li>
+						<li id="tab1-nav" role="presentation" class="active"><a href="#tab1" aria-controls="tab1" role="tab" data-toggle="tab">{{ trans('string.download-alliance')}}</a></li>
+						<li id="tab2-nav" role="presentation"><a href="#tab2" aria-controls="tab2" role="tab" data-toggle="tab">{{ trans('string.download-industry')}}</a></li>
+						<li id="tab3-nav" role="presentation"><a href="#tab3" aria-controls="tab3" role="tab" data-toggle="tab">{{ trans('string.download-app')}}</a></li>
 					</ul>
 				</div>
 				<!-- Tab panes -->
@@ -34,7 +48,7 @@
 						<div role="tabpanel" class="tab-pane active" id="tab1">
 							<div ="new-tab" class="info-tab">
 								<div class="page-header">
-								  	<h4 class="section-title"><i class="fa fa-download" aria-hidden="true"></i> 聯盟中心教材</h4>
+								  	<h4 class="section-title"><i class="fa fa-download" aria-hidden="true"></i> {{ trans('string.download-alliance')}}</h4>
 								</div>
 								<div class="col-md-12">
 									<div class="cardview">
@@ -66,7 +80,7 @@
 						<div role="tabpanel" class="tab-pane" id="tab2">
 							<div id="new-tab" class="info-tab">
 								<div class="page-header">
-								  	<h4 class="section-title"><i class="fa fa-download" aria-hidden="true"></i> 國內廠商資料</h4>
+								  	<h4 class="section-title"><i class="fa fa-download" aria-hidden="true"></i> {{ trans('string.download-industry')}}</h4>
 								</div>
 								
 								<div class="col-md-12">
@@ -87,7 +101,7 @@
 						<div role="tabpanel" class="tab-pane" id="tab3">
 							<div id="new-tab" class="info-tab">
 								<div class="page-header">
-								  	<h4 class="section-title"><i class="fa fa-qrcode" aria-hidden="true"></i> APP下載區</h4>
+								  	<h4 class="section-title"><i class="fa fa-qrcode" aria-hidden="true"></i> {{ trans('string.download-app')}}</h4>
 								</div>
 								<div class="col-md-12">
 									<div class="cardview">
