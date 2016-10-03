@@ -65,9 +65,14 @@
 
 		    <li><a href="{{ trans('string.lang-href') }}"><i class="fa fa-globe" aria-hidden="true"></i>{{ trans('string.lang') }}</a></li>
 		    <li class="dropdown">
-		      <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">{{ trans('string.greeting', ['name' => '使用者']) }}<span class="caret"></span></a>
+		      <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">{{ trans('string.greeting', ['name' => $userName ]) }}<span class="caret"></span></a>
 		      <ul class="dropdown-menu">
-		      	<li><a href="admin" class="link_btn" >{{ trans('string.admin') }}</a></li>
+		      	<?php if($userType == 1){
+		      			echo "<li><a href='admin' class='link_btn'>";
+		      			echo trans('string.admin'); 
+		      			echo "</a></li>";
+		      			} ?>
+		      	
 		      	<li><a href="account#upload" class="link_btn" >{{ trans('string.upload') }}</a></li>
 		        <li><a id="favorite-btn" href="account#favorite">{{ trans('string.myfavorite') }}</a></li>
 		        <li><a id="myupload-btn" href="account#mypaper">{{ trans('string.myuploaded') }}</a></li>

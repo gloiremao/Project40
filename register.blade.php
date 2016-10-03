@@ -140,22 +140,22 @@
                                 <div class="col-md-6">
                                     <div class="radio">
                                         <label>
-                                            <input type="radio" name="optionsRadios" id="optionsRadios1" value="student" checked>{{ trans('string.student')}}
+                                            <input type="radio" name="identity" id="optionsRadios1" value="student" checked>{{ trans('string.student')}}
                                         </label>
                                     </div>
                                     <div class="radio">
                                         <label>
-                                            <input type="radio" name="optionsRadios" id="optionsRadios2" value="teacher">{{ trans('string.teacher')}}
+                                            <input type="radio" name="identity" id="optionsRadios2" value="teacher">{{ trans('string.teacher')}}
                                         </label>
                                     </div>
                                     <div class="radio">
                                         <label>
-                                            <input type="radio" name="optionsRadios" id="optionsRadios3" value="engineer">{{ trans('string.engineer')}}
+                                            <input type="radio" name="identity" id="optionsRadios3" value="engineer">{{ trans('string.engineer')}}
                                         </label>
                                     </div>
                                     <div class="radio">
                                         <label>
-                                            <input type="radio" name="optionsRadios" id="optionsRadios3" value="others">{{ trans('string.others')}}
+                                            <input type="radio" name="identity" id="optionsRadios3" value="others">{{ trans('string.others')}}
                                         </label>
                                     </div>
                                 </div>
@@ -182,25 +182,25 @@
                             <div class="form-group">
                                 <label class="col-md-4 control-label">{{ trans('string.company')}}</label>
                                 <div class="col-md-6">
-                                    <input class="form-control" placeholder="{{ trans('string.company_holder')}}">
+                                    <input class="form-control" name="company" placeholder="{{ trans('string.company_holder')}}">
                                 </div>
                                 <label class="col-md-4 control-label">{{ trans('string.department')}}</label>
                                 <div class="col-md-6">
-                                    <input class="form-control" placeholder="{{ trans('string.department-holder')}}">
+                                    <input class="form-control" name="department" placeholder="{{ trans('string.department-holder')}}">
                                 </div>
                             </div>
 
                             <div class="form-group">
                                 <label class="col-md-4 control-label">{{ trans('string.id')}}</label>
                                 <div class="col-md-6">
-                                    <input class="form-control" placeholder="{{ trans('string.id_holder')}}">
+                                    <input class="form-control" name="" placeholder="{{ trans('string.id_holder')}}">
                                 </div>
                             </div>
 
                             <div class="form-group">
                                 <label class="col-md-4 control-label">{{ trans('string.cellphone')}}</label>
                                 <div class="col-md-6">
-                                    <input class="form-control" placeholder="{{ trans('string.cellphone_holder')}}">
+                                    <input class="form-control" name="phone" placeholder="{{ trans('string.cellphone_holder')}}">
                                 </div>
                             </div>
 
@@ -267,7 +267,7 @@
 				</div>
 			</div>
 
-			<p class="footer-company-name">{{ trans('string.address')}}</p>
+			<p class="footer-company-name">{{ trans('string.footer-title')}}</p>
 		</div>
 
 

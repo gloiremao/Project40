@@ -55,11 +55,12 @@
 					</div>
 					<div class="list-group">
 					  <?php 
-								foreach ($papers as $paper) {
-									echo "<a data-target='{$paper->id}' href='view?id={$paper->id}' class='list-group-item'>
-										    <h4 class='list-group-item-heading'>{$paper->title}</h4>
-										    <p class='list-group-item-text authors-list'>{$paper->authors}</p>
-										  </a>";
+								foreach ($authors as $author) {
+									echo "<a href='author?id={$author->id}' class='list-group-item'>
+										    <h4 class='list-group-item-heading'>{$author->name}</h4>
+										    <p class='list-group-item-text'>";
+									echo trans('string.views');
+									echo ":{$paper->count}</p></a>";
 								}
 								
 							?>

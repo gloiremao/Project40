@@ -5,7 +5,7 @@
 @stop
 
 @section('include-js')
-	<script type="text/javascript" src="js/author.js"></script>
+	
 @stop
 
 
@@ -21,7 +21,7 @@
 					<!-- Nav tabs -->
 					<div id="profile">
 						<img src="img/user.png">
-						<p id="author-name">王大明</p>
+						<p id="author-name">{{ $author }}</p>
 					</div>
 					
 				</div>
@@ -29,20 +29,17 @@
 					<!-- Nav tabs -->
 					<div class="col-md-12">
 						<div class="page-header">
-							<h4 id="show_serach_keywords">{{ trans('string.author-info')}}</h4>
+							<h4 id="show_serach_keywords">{{ trans('string.author-info', ['count' => count($papers)])}}</h4>
 						</div>
 
-						<div id="serach_results" class="list-group">
-				
-				
-						</div>
-
-						<div class="col-md-10">
-							<nav >
-							  <ul id="serach-nav" class="pagination">
-							    
-							  </ul>
-							</nav>
+						<div class="list-group">
+							<?php 
+								foreach ($papers as $paper) {
+									echo "<a data-target='{$paper['id']}' target='_blank' href='view?id={$paper['id']}' class='list-group-item'>
+										    <h4 class='list-group-item-heading'>{$paper['title']}</h4>
+										    <p class='list-group-item-text authors-list'>{$paper['authors']}</p></a>";
+								}
+							?>
 						</div>
 
 					</div>

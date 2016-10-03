@@ -92,7 +92,7 @@ return [
     'origin_pwd' => 'Old Password',
     'origin_pwd_holder' => 'Please fill in your old password',
     'new_pwd' => 'New password',
-    'author-info' => 'We can not find any paper',
+    'author-info' => 'About :count papers in our Database',
     'search_results' => 'Results from ',
     'search_count' => ', total：',
     'keyword' => 'Keywords',
@@ -106,11 +106,7 @@ return [
     'level' => 'Level',
     'comment_title' => 'Comment',
     'comment-content' => 'Post a comment',
-    'favorite' => 'Favorite',
+    'favorite' => 'Save',
     'views' => 'Views',
- 
-
-
-
 
 ];

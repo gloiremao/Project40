@@ -26,7 +26,25 @@
 		  	</p>
 		</div>
 		<div id="like" class="col-md-1">
-		  	<button type="button" class="btn btn-danger"><i class="fa fa-heart" aria-hidden="true"></i> {{ trans('string.favorite')}}</button>
+			
+		  	
+		  	<?php
+		  		if( $paper->checked == 0 && $userType == 1) {
+		  			
+						
+					
+		  			echo "<form role='form' method='POST' action='view/confirm'>";
+		  			echo csrf_field();
+		  			echo	"<input name='id' value='{$paper->id}' type='hidden' style='visibility='>
+		  					<button type='submit' class='btn btn-danger'><i class='fa fa-check-square' aria-hidden='true'></i> 確認審核</button>
+	  					</form>";
+		  		}else {
+		  			echo "<button type='button' class='btn btn-danger'><i class='fa fa-heart' aria-hidden='true'></i> ";
+		  			echo trans('string.favorite');
+		  			echo "</button>";
+		  		}
+		  		
+		  	?>
 		</div>
 		<div class="paper-info">
 			<table class="paper-table">

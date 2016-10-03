@@ -195,7 +195,7 @@
 				</div>
 			</div>
 
-			<p class="footer-company-name">{{ trans('string.welcome-msg')}}</p>
+			<p class="footer-company-name">{{ trans('string.footer-title')}}</p>
 		</div>
 
 

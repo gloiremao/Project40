@@ -63,6 +63,7 @@ return [
     'student' => '學生',
     'teacher' => '教師',
     'engineer' => '工程師',
+    'administrator' => '管理員',
     'others' => '其他',
     'myname' => '姓名',
     'name_holder' => '請填您的真實姓名',
@@ -92,7 +93,7 @@ return [
     'origin_pwd' => '原始密碼',
     'origin_pwd_holder' => '請填入原始密碼',
     'new_pwd' => '新密碼',
-    'author-info' => '目前沒有此作者的作品',
+    'author-info' => '此作者資料共：:count 筆',
     'search_results' => '搜尋結果從',
     'search_count' => ',資料筆數：',
     'keyword' => '關鍵字',
@@ -108,10 +109,5 @@ return [
     'comment-content' => '發表評論或問題回報',
     'favorite' => '收藏',
     'views' => '瀏覽次數',
-
- 
-
-
-
 
 ];

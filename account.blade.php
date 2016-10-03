@@ -6,6 +6,18 @@
 
 @section('include-js')
 	<script type="text/javascript" src="js/account.js"></script>
+	<script type="text/javascript">
+	function validateForm() {
+	   	var title = $("#paper-title").val();
+	   	var content = $("#paper-link").val();
+	    if (title == "" || content == "") {
+	    	alert("標題與連結不可為空。");
+	        return false;
+	    } else {
+	    	return true;
+	    }
+	}
+	</script>
 @stop
 
 
@@ -25,7 +37,7 @@
 					<!-- Nav tabs -->
 					<div id="profile">
 						<img src="img/user.png">
-						<p id="name">王大明</p>
+						<p id="name">{{ $user['name'] }}</p>
 					</div>
 					<ul class="nav nav-tabs" role="tablist">
 						<li id="home-nav" role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">{{ trans('string.modify')}}</a></li>
@@ -45,19 +57,19 @@
 		                            	<table class="paper-table">
 											  <tr>
 											    <td class="table-title">{{ trans('string.identity')}}</td>
-											    <td class="table-info"><p>管理員</p></td>
+											    <td class="table-info"><p>{{ $user['identity'] }}</p></td>
 											  </tr>
 											  <tr>
 											    <td class="table-title">{{ trans('string.cellphone')}}</td>
-											    <td class="table-info"><p>0912XXXXXX</p></td>
+											    <td class="table-info"><p>{{ $user['telephone'] }}</p></td>
 											  </tr>
 											  <tr>
 											    <td class="table-title">{{ trans('string.email')}}</td>
-											    <td class="table-info"><p>itri@itri.org.tw</p></td>
+											    <td class="table-info"><p>{{ $user['email'] }}</p></td>
 											  </tr>
 											  <tr>
 											    <td class="table-title">{{ trans('string.company')}}</td>
-											    <td class="table-info"><p>工業技術研究院</p></td>
+											    <td class="table-info"><p>{{ $user['school'] }}{{ $user['major'] }}</p></td>
 											  </tr>
 										</table>
 		                            </div>
@@ -128,44 +140,76 @@
 								  	<h4 class="section-title"><i class="fa fa-bolt" aria-hidden="true"></i> {{ trans('string.upload')}}</h4>
 								</div>
 								<div class="row">
-									<div class="col-lg-6">
+									<div class="col-lg-8">
 										
-				                        <form role="form">
+				                        <form role="form" method="POST" onsubmit="return validateForm()" action="{{ url('/upload') }}">
+											{{ csrf_field() }}
 				                            <div class="form-group">
 				                                <label>標題</label>
-				                                <input class="form-control" placeholder="標題">
+				                                <input id="paper-title" name="title" class="form-control" placeholder="標題">
+				                            </div>
+
+				                            <div class="form-group">
+				                                <label>類型</label>
+				                                <select class="form-control" name="type">
+				                                	<option>論文</option>
+				                                    <option>簡報</option>
+				                                    <option>影片</option>
+				                                    <option>公告</option>
+				                                    <option>專利</option>
+				                                    <option>標準</option>
+				                                    <option>型錄</option>
+				                                    <option>其他</option>
+				                                </select>
+				                            </div>
+
+				                            <div class="form-group">
+				                                <label>技術領域</label>
+				                                <select class="form-control" name="technology">
+				                                	<option>IoT</option>
+				                                    <option>Big Data</option>
+				                                    <option>數位製造</option>
+				                                    <option>資訊安全</option>
+				                                    <option>Sensor Network</option>
+				                                    <option>CPS</option>
+				                                    <option>工業網路</option>
+				                                    <option>I4</option>
+				                                    <option>其它</option>
+				                                </select>
 				                            </div>
 
 				                            <div class="form-group">
 				                                <label>連結網址</label>
-				                                <input class="form-control" placeholder="請填入資料連結">
+				                                <input id="paper-link" name="link" class="form-control" placeholder="請填入資料連結">
 				                            </div>
+
+				                            <textarea id="f-content" id="input-comment"class="form-control" rows="3" name="abstract" placeholder="摘要"></textarea>
 
 				                            <div class="form-group">
 				                                <label>作者</label>
-				                                <input class="form-control" placeholder="請填入作者">
+				                                <input name="authors" class="form-control" placeholder="請填入作者">
 				                                <p class="help-block">如果有多位作者，請以","隔開</p>
 				                            </div>
 
 				                            <div class="form-group">
 				                                <label>國家</label>
-				                                <input class="form-control" placeholder="請填入此資料出處國家">
+				                                <input name="country" class="form-control" placeholder="請填入此資料出處國家">
 				                            </div>
 
 				                            <div class="form-group">
-				                                <label>發佈日期</label>
-				                                <input class="form-control" placeholder="請填入此資料發佈日期">
+				                                <label>發佈日期西元年</label>
+				                                <input name="year" class="form-control" placeholder="請填入此資料發佈日期西元年">
 				                            </div>
 
 				                            <div class="form-group">
 				                                <label>發佈出處以及單位</label>
-				                                <input class="form-control" placeholder="請填入此資料發佈出處">
-				                                <input class="form-control" placeholder="請填入此資料發佈單位">
+				                                <input name="source" class="form-control" placeholder="請填入此資料發佈出處">
+				                                <input name="office" class="form-control" placeholder="請填入此資料發佈單位">
 				                            </div>
 
 				                            <div class="form-group">
-				                                <label>作者</label>
-				                                <input class="form-control" placeholder="請填入資料關鍵字">
+				                                <label>關鍵字</label>
+				                                <input name="keywords" class="form-control" placeholder="請填入資料關鍵字">
 				                                <p class="help-block">如果有多個關鍵字，請以","隔開</p>
 				                            </div>
 
@@ -173,17 +217,17 @@
 				                                <label>等級</label>
 				                                <div class="radio">
 				                                    <label>
-				                                        <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>初級
+				                                        <input type="radio" name="level" id="optionsRadios1" value="初階" checked>初級
 				                                    </label>
 				                                </div>
 				                                <div class="radio">
 				                                    <label>
-				                                        <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">中級
+				                                        <input type="radio" name="level" id="optionsRadios2" value="中階">中級
 				                                    </label>
 				                                </div>
 				                                <div class="radio">
 				                                    <label>
-				                                        <input type="radio" name="optionsRadios" id="optionsRadios3" value="option3">高級
+				                                        <input type="radio" name="level" id="optionsRadios3" value="高階">高級
 				                                    </label>
 				                                </div>
 				                            </div>
@@ -191,7 +235,7 @@
 				                           
 				                            <div class="form-group">
 				                                <label>LC&amp;VS</label>
-				                                <select class="form-control">
+				                                <select class="form-control" name="LCandVS">
 				                                	<option>All</option>
 				                                    <option>Development</option>
 				                                    <option>Instance: maintenance/usage</option>
@@ -202,7 +246,7 @@
 
 				                            <div class="form-group">
 				                                <label>Vertical Layers</label>
-				                                <select class="form-control">
+				                                <select class="form-control" name="VL">
 				                                	<option>All</option>
 				                                    <option>Asset</option>
 				                                    <option>Integration</option>
@@ -215,7 +259,7 @@
 
 				                            <div class="form-group">
 				                                <label>Horizontal Layers</label>
-				                                <select class="form-control">
+				                                <select class="form-control" name="HL">
 				                                	<option>All</option>
 				                                	<option>Product</option>
 				                                    <option>Field Device</option>
